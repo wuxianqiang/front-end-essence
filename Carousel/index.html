@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>轮播图</title>
+    <style type="text/css">
+        .banner{
+            position: relative;
+            width: 790px;
+            height: 340px;
+            margin: 10px auto;
+            overflow: hidden;
+        }
+        .banner .inner {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 3950px;
+        }
+        .banner .inner div {
+            float: left;
+            width: 790px;
+            height: 340px;
+            background: url("img/simpc.jpg") no-repeat center center #e1e1e1;/*这里是做图片延迟加载的*/
+
+        }
+        .banner .inner img{/*图片放在div里面*/
+            display: none;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            filter: alpha(opacity = 0);
+        }
+        .banner ul {
+            position: absolute;
+            bottom: 10px;
+            right: 20px;
+            z-index: 999;
+        }
+        .banner ul li {
+            cursor: pointer;
+            display: block;
+            float: left;
+            margin-left: 20px;
+            color: #fff;
+            text-align: center;
+            line-height: 20px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: red;
+        }
+        .banner ul li.bg{
+            background-color: yellow;
+        }
+        .banner .mark {
+            display: none;
+            position: absolute;
+            top: 50%;
+            margin-top: -50px;
+            left: 0;
+            width: 790px;
+            z-index: 888;
+        }
+        .banner .mark .mark-l {
+            float: left;
+        }
+        .banner .mark .mark-r {
+            float: right;
+
+        }
+        .banner .mark a {
+
+            text-decoration: none;
+            width: 50px;
+            height: 100px;
+            text-align: center;
+            background: rgba(0,0,0,.3);
+            font: 900 50px/100px "SimSun";
+            color: white;
+        }
+        .banner .mark a:hover {
+            background: rgba(0,0,0,.6);
+        }
+    </style>
+</head>
+<body>
+<div class="banner" id="banner">
+    <div class="inner">
+        <!--<img src="images/banner01.jpg" alt="">
+        <img src="images/banner02.jpg" alt="">
+        <img src="images/banner03.jpg" alt="">
+        <img src="images/banner04.jpg" alt="">
+        <img src="images/banner05.jpg" alt="">-->
+    </div>
+    <ul>
+        <!--<li class="bg">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>-->
+    </ul>
+    <div class="mark" id="mark">
+        <a href="javascript:;" class="mark-l"> < </a>
+        <a href="javascript:;" class="mark-r"> > </a>
+    </div>
+
+</div>
+<script charset="utf-8" type="text/javascript" src="js/utils.js"></script>
+<script charset="utf-8" type="text/javascript" src="js/jsonWay.js"></script>
+
+<script charset="utf-8" type="text/javascript" src="js/tween.js"></script>
+<script charset="utf-8" type="text/javascript" src="js/banner.js"></script>
+
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>
