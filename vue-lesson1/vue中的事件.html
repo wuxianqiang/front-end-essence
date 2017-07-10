@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <button @click="fn">增加</button>
+        <ul>
+            <li v-for="item in arr">
+                {{item}}
+            </li>
+        </ul>
+    </div>
+    <script type="text/javascript" src="./vue2.js"></script>
+    <script type="text/javascript">
+    new Vue({
+        el:"#app",
+        data:{
+            arr:[6,6,6]
+        },
+        methods:{
+            fn(){
+                this.arr.push(6);
+            }
+        }
+    })
+    
+    </script>
+</body>
+</html>
