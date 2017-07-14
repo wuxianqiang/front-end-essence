@@ -6,6 +6,7 @@
 ## 目录
 ### 读过的书
 [GitHub秘籍](https://github.com/tiimgreen/github-cheat-sheet/blob/master/README.zh-cn.md#markdown-%E6%96%87%E4%BB%B6%E8%AF%AD%E6%B3%95%E9%AB%98%E4%BA%AE)
+[七天学会NodeJS](http://nqdeng.github.io/7-days-nodejs/)
 <br>
 ### 你是如何进行网站优化的？
 减少http请求次数
