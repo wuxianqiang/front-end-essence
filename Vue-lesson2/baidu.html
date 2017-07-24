@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style type="text/css">
+        .active {
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <label for=""></label>
+        <input type="text" name="" value="" @keyup="search" v-model="query" @keydown.down="down" @keydown.up.prevent="up">
+        <button type="button" @click="goLink">百度一下</button>
+        <ul>
+            <li v-for="(data,key) in datas" :class="{active:index==key}">
+                <a href="javascript:;">{{data}}</a>
+            </li>
+        </ul>
+    </div>
+    <script type="text/javascript" src="./vue2.js"></script>
+    <script type="text/javascript" src="./vue-resource.js"></script>
+    <script type="text/javascript">
+        //https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=d\
+        var vm = new Vue({
+            el: "#app",
+            data: {
+                query: "",
+                datas: [],
+                index: -1
+            },
+            methods: {
+                down() {
+                    if (this.index == this.datas.length - 1) {
+                        this.index = 0;
+                    } else {
+                        this.index++;
+                    }
+
+                    this.query = this.datas[this.index];
+                },
+                up() {
+                    if (this.index == 0) {
+                        this.index = this.datas.length - 1;
+                    } else {
+                        this.index--;
+                    }
+                    this.query = this.datas[this.index];
+                },
+                search(e) {
+                    var keyCode = e.keyCode;
+                    if (keyCode == 38 || keyCode == 40) {
+                        return;
+                    }
+                    if(keyCode == 13){
+                        return window.open("https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=1&rsv_idx=1&tn=baidu&wd="+ this.query);
+                    }
+                    this.$http.jsonp("https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su", {
+                        params: {
+                            wd: this.query
+                        },
+                        jsonp: "cb"
+                    }).then(function (response) {
+                        var datas = response.body;
+                        this.datas = datas["s"];
+                    })
+                },
+                goLink() {
+                    window.open("https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=1&rsv_idx=1&tn=baidu&wd="+ this.query);
+                }
+
+            }
+        })
+    </script>
+</body>
+
+</html>

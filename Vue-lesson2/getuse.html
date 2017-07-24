@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        {{msg}}
+        <button @click="getList">请求数据</button>
+        <button @click="addInfo">发送数据</button>
+        <button @click="getData">百度一下</button>
+    </div>
+    <script type="text/javascript" src="./vue2.js"></script>
+    <script type="text/javascript" src="./vue-resource.js"></script>
+    <script type="text/javascript">
+        //vue-resource
+        var vm = new Vue({
+            el: "#app",
+            data: {
+                msg: ""
+            },
+            methods: {
+                getList() {
+                    //使用Vue发送get请求
+                    //发送Ajax请求，请求成功返回一个promise实例
+                    this.$http.get("/getList").then(function (response) {
+                        //所有返回过来的数据都在response
+                        this.msg = response.body;
+                    })
+                },
+                addInfo() {
+                    this.$http.post("/addInfo", {
+                        id: 2,
+                        name: "ww",
+                        age: 18,
+                        phone: 234,
+                        address: "nen"
+                    }).then(function (data) {
+                        console.log(data);
+                    })
+                },
+                getData() {
+                    this.$http.jsonp("https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su", {
+                        params: {
+                            wd: "c"
+                        },
+                        jsonp: "cb"
+                    }).then(function (response) {
+                        console.log(response)
+                    })
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
