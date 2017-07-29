@@ -1,6 +1,6 @@
 # Web前端精髓
 
-前端与移动开发 The front-end development [博客 | blog](https://wuxianqiang.github.io/)
+前端与移动开发 The front-end development [博客 | blog](https://wuxianqiang.github.io/) [博客 | CSDN](http://blog.csdn.net/wu_xianqiang)
 
 ## 目录
 
