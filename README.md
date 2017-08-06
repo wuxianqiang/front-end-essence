@@ -23,7 +23,7 @@ for (var key in object) {
 ```
 2. ECMAScript5 中新增 `Object。create()` 创建一个拥有指定原型和若干指定属性的对象。
 
-3. 原型链继承
+3. 原型链继承 (重点)
 
 ```js
 function A(){
