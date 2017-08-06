@@ -39,4 +39,15 @@ B.prototype = new A;
 B.prototype.constructor = B;
 ```
 
+4. call继承
+
+```js
+function A(){
+    this.x = 100;
+}
+function B(){
+    A.call(this);
+}
+```
+
 > 支持作者请点击右上角的Star按钮
