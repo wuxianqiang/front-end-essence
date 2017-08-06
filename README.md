@@ -68,4 +68,20 @@ function B() {
 }
 ```
 
+6. 混合模式继承
+
+```js
+function A() {
+    this.x = 100;
+}
+A.prototype.getX = function () {
+    console.log(this);
+};
+function B() {
+    A.call(this);
+}
+B.prototype = Object.create(A.prototype);
+B.prototype.constructor = B;
+```
+
 > 支持作者请点击右上角的Star按钮
