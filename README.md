@@ -23,7 +23,20 @@ for (var key in object) {
 ```
 2. ECMAScript中新增 `Object。create()` 创建一个拥有指定原型和若干指定属性的对象。
 
+3. 原型链继承
+
 ```js
+function A(){
+    this.x = 100;
+}
+A.prototype.getX = function (){
+    console.log(this.x);
+}
+function B(){
+    this.y = 200;
+}
+B.prototype = new A;
+B.prototype.constructor = A;
 ```
 
 > 支持作者请点击右上角的Star按钮
