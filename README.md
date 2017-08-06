@@ -50,4 +50,22 @@ function B(){
 }
 ```
 
+5. 冒充对象继承
+
+```js
+function A() {
+    this.x = 100;
+}
+A.prototype.getX = function () {
+    console.log(this.x);
+};
+function B() {
+    var temp = new A;
+    for (var key in temp) {
+        this[key] = temp[key]; 
+    }
+    temp = null;
+}
+```
+
 > 支持作者请点击右上角的Star按钮
