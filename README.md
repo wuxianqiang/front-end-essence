@@ -13,12 +13,17 @@
 ### 知识分析
 
 1. `for-in` 循环再遍历的时候，默认的话可以把自己私有的和它所属类的原型上拓展的方法都可以变量到，但是一般情况下只要遍历私有的属性，解决方法：
+
 ```js
 for (var key in object) {
     if (object.hasOwnProperty(key)) {
         
     }
 }
+```
+2. ECMAScript中新增 `Object。create()` 创建一个拥有指定原型和若干指定属性的对象。
+
+```js
 ```
 
 > 支持作者请点击右上角的Star按钮
