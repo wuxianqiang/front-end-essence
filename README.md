@@ -12,6 +12,7 @@
 4. [Webpack](https://webpack.github.io/)
 5. [Vue](https://cn.vuejs.org/)
 6. [Bootstrap](https://getbootstrap.com/)
+7. [ES6](http://es6.ruanyifeng.com/)
 
 ### JavaScript
 
