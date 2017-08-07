@@ -10,6 +10,7 @@
 2. [七天学会NodeJS](http://nqdeng.github.io/7-days-nodejs/)
 3. [构建单页Web应用](https://github.com/xufei/blog/issues/5)
 4. [Webpack](https://webpack.github.io/)
+5. [Vue](https://cn.vuejs.org/)
 
 ### JavaScript
 
