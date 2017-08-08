@@ -136,5 +136,19 @@ B.prototype.constructor = B;
 ```
 
 7. 使用 `instanceof` 检测某个类是否属于这个类的实例，只有在原型链上就会返回 \*true\*
+8. 函数的多面性，包括函数，类，对象
+
+```js
+function Fn(){
+    var num = 1;
+    this.x = 10;
+}
+Fn.prototype.getX = function (){
+    console.log(this.x);
+}
+Fn();
+var f = new Fn;
+Fn.y = 100;
+```
 
 > 支持作者请点击右上角的Star按钮
