@@ -71,7 +71,8 @@ for (var key in object) {
 }
 ```
 2. ECMAScript5 中新增 `Object.create()` 创建一个拥有指定原型和若干指定属性的对象。
-3. 对未初始化的变量执行 `typeof` 操作符会返回 `undefined` 值，而对未生命的变量执行 `typeof` 操作符同样也会返回 `undefined` 值
+3. 对未初始化的变量执行 `typeof` 操作符会返回 `undefined` 值，而对未声明的变量执行 `typeof` 操作符同样也会返回 `undefined` 值。
+4. 位于 `null` 和 `undefined` 之间的相等 `==` 总是返回 `true` 
 
 ----------------------------------------------------------------------------------
 
