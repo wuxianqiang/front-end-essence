@@ -104,4 +104,6 @@ B.prototype = Object.create(A.prototype);
 B.prototype.constructor = B;
 ```
 
+7. 使用 `instanceof` 检测某个类是否属于这个类的实例，只有在原型链上就会返回 *true\*
+
 > 支持作者请点击右上角的Star按钮
