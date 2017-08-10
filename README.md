@@ -153,4 +153,19 @@ var f = new Fn;
 Fn.y = 100;
 ```
 
+--------------------------------------------------------------------
+
+#### this问题
+
+```js
+function mycall(){
+    //假设已经更改了this
+    this();
+}
+Function.prototype.call = mycall;
+fn1.call.call(fn2); //fn1.call只是找到了call
+mycall.call(fn2);   //然后改变this再执行，this变成了fn2
+fn1.call.call.call(fn2);    //fn1.call.call只是找到了call
+```
+
 > 支持作者请点击右上角的Star按钮
