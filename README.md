@@ -167,5 +167,10 @@ fn1.call.call(fn2); //fn1.call只是找到了call
 mycall.call(fn2);   //然后改变this再执行，this变成了fn2
 fn1.call.call.call(fn2);    //fn1.call.call只是找到了call
 ```
+------------------------------------------------------------------------
+
+#### 数值转换，
+
+有3个函数可以把非数值转换为数值：Number()、parseInt()和parseFloat()。第一个函数，即转型函数Number()可以用于任何数据类型，而另两个函数则专门用于把字符串转换成数值。parseInt()提供第二个参数，转换时使用的基数（即多少进制）
 
 > 支持作者请点击右上角的Star按钮
