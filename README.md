@@ -280,7 +280,6 @@ endsWith()：返回布尔值，表示参数字符串是否在源字符串的尾�
 
 ## HTML5
 
-<pre>
 `querySelector()` 方法接收一个CSS选择符，返回与该模式匹配的第一个元素，如果没有找到匹配的元素，返回 `null` 。
 `querySelectorAll()` 方法接收的参数与 `querySelector()` 方法一样，都是一个CSS选择符，但返回的是所有匹配的元素而不仅仅是一个元素。这个方法返回的是一个 `NodeList` 的实例。
 Selectors API Level 2规范为 Element 类型新增了一个方法 `matchesSelector()` 。这个方法接收一个参数，即CSS选择符，如果调用元素与该选择符匹配，返回 `true` ；否则，返回 `false` 。看例子。在取得某个元素引用的情况下，使用这个方法能够方便地检测它是否会被 `querySelector()` 或 `querySelectorAll()` 方法返回。
@@ -291,6 +290,5 @@ Selectors API Level 2规范为 Element 类型新增了一个方法 `matchesSelec
 - `previousElementSibling` ：指向前一个同辈元素； `previousSibling` 的元素版。
 - `nextElementSibling` ：指向后一个同辈元素； `nextSibling` 的元素版。
 
-<pre>
 
 > 支持作者请点击右上角的Star按钮。
