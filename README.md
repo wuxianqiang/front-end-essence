@@ -1,8 +1,8 @@
 # Web前端精髓
 
-> Web前端技术由html、css和javascript三大部分构成，是一个庞大而复杂的技术体系，其复杂程度不低于任何一门后端语言。而我们在学习它的时候往往是先从某一个点切入，然后不断地接触和学习新的知识点，因此对于初学者很难理清楚整个体系的脉络结构。
+**Web前端技术由html、css和javascript三大部分构成，是一个庞大而复杂的技术体系，其复杂程度不低于任何一门后端语言。而我们在学习它的时候往往是先从某一个点切入，然后不断地接触和学习新的知识点，因此对于初学者很难理清楚整个体系的脉络结构。
 
-前端与移动开发 The front-end development [博客|CSDN](http://blog.csdn.net/wu_xianqiang) [知乎|专栏](https://zhuanlan.zhihu.com/webqianduan)
+> 作者：前端与移动开发 The front-end development [博客|CSDN](http://blog.csdn.net/wu_xianqiang) [知乎|专栏](https://zhuanlan.zhihu.com/webqianduan)
 
 ## 目录
 
