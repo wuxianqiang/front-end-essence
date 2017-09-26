@@ -178,8 +178,7 @@ fn1.call.call.call(fn2);    //fn1.call.call只是找到了call
 
 #### String
 
-String对象的方法也可以在所有基本的字符串值中访问到，其中，继承的 `valueOf()`、 `toLocaleString()` 和 `toString()` 方法，都是返回对象所表示的基本字符串值。
-String类型的每个实例都有 `length` 属性，表示字符串中包含多少个字符。
+> String对象的方法也可以在所有基本的字符串值中访问到，其中，继承的 `valueOf()`、 `toLocaleString()` 和 `toString()` 方法，都是返回对象所表示的基本字符串值。String类型的每个实例都有 `length` 属性，表示字符串中包含多少个字符。
 
 1. 字符串方法
 
