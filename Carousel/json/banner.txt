@@ -1,5 +1,0 @@
-[{"img":"img/banner01.jpg","desc":"描述一"},
-{"img":"img/banner02.jpg","desc":"描述二"},
-{"img":"img/banner03.jpg","desc":"描述三"},
-{"img":"img/banner04.jpg","desc":"描述四"},
-{"img":"img/banner05.jpg","desc":"描述五"}]
