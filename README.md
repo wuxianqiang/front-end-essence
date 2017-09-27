@@ -11,13 +11,8 @@
 1. [GitHub秘籍](https://github.com/tiimgreen/github-cheat-sheet/blob/master/README.zh-cn.md#markdown-%E6%96%87%E4%BB%B6%E8%AF%AD%E6%B3%95%E9%AB%98%E4%BA%AE)
 2. [七天学会NodeJS](http://nqdeng.github.io/7-days-nodejs/)
 3. [构建单页Web应用](https://github.com/xufei/blog/issues/5)
-4. [Webpack](https://webpack.github.io/)
-5. [Vue](https://cn.vuejs.org/)
-6. [Bootstrap](https://getbootstrap.com/)
-7. [ES6](http://es6.ruanyifeng.com/)
-8. [Less](http://lesscss.org/)
-9. [IcoMoon](https://icomoon.io/)
-10. [ES6特性](http://es6-features.org/#Constants)
+4. [ES6新特性](http://es6-features.org/#Constants)
+5. [Vue语法清单](https://vuejs-tips.github.io/cheatsheet/)
 
 ### JavaScript
 
