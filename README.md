@@ -326,7 +326,7 @@ ECMAScript 5还新增了两个缩小数组的方法： `reduce()` 和 `reduceRig
 * `Object.assign` 方法用于对象的合并，将源对象（source）的所有可枚举属性，复制到目标对象（target）。
 * `__proto__` 属性（前后各两个下划线），用来读取或设置当前对象的 `prototype` 对象。目前，所有浏览器（包括 IE11）都部署了这个属性。
 * `Object.setPrototypeOf` 方法的作用与 `__proto__` 相同，用来设置一个对象的 `prototype` 对象，返回参数对象本身。它是 ES6 正式推荐的设置原型对象的方法。
-* 该方法与 `Object.setPrototypeOf` 方法配套，用于读取一个对象的原型对象。
+* `Object.getPrototypeOf()` 该方法与 `Object.setPrototypeOf` 方法配套，用于读取一个对象的原型对象。
 
 -----------------------------------------------------------------------
 
