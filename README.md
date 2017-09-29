@@ -298,6 +298,18 @@ ECMAScript 5还新增了两个缩小数组的方法： `reduce()` 和 `reduceRig
 * `Array.prototype.includes` 方法返回一个布尔值，表示某个数组是否包含给定的值，与字符串的 `includes` 方法类似。ES2016 引入了该方法。
 * 数组的空位指，数组的某一个位置没有任何值。比如，Array构造函数返回的数组都是空位。
 
+#### Object类型
+
+##### 1. Object的每个实例都具有下列属性和方法
+
+* `Constructor` ：保存着用于创建当前对象的函数。
+* `hasOwnProperty(propertyName)` ：用于检查给定的属性在当前对象实例中（而不是在实例的原型中）是否存在。其中，作为参数的属性名（ `propertyName` ）必须以字符串形式指定（例如： `o.hasOwnProperty(“name”)` ）。
+* `isPrototypeOf(object)` ：用于检查传入的对象是否是另一个对象的原型。
+* `propertyIsEnumerable(propertyName)` ：用于检查给定的属性是否能够使用 `for-in` 语句（本章后面将会讨论）来枚举。与 `hasOwnProperty()` 方法一样，作为参数的属性名必须以字符串形式指定。
+* `toLocaleString()` ：返回对象的字符串表示，该字符串与执行环境的地区对应。
+* `toString()` ：返回对象的字符串表示。
+* `valueOf()` ：返回对象的字符串、数值或布尔值表示。通常与 `toString()` 方法的返回值相同。
+
 #### DOM
 
 1. `querySelector()` 方法接收一个CSS选择符，返回与该模式匹配的第一个元素，如果没有找到匹配的元素，返回 `null` 。
