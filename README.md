@@ -15,7 +15,7 @@ Web前端技术由html、css和javascript三大部分构成，是一个庞大而
 5. [Vue语法清单](https://vuejs-tips.github.io/cheatsheet/)
 6. [3D动画](https://desandro.github.io/3dtransforms/)
 7. [学习正则](https://github.com/zeeshanu/learn-regex/blob/master/README-cn.md#52-%E5%85%A8%E5%B1%80%E6%90%9C%E7%B4%A2-global-search)
-8. [每个程序员应该知道的](https://github.com/mr-mig/every-programmer-should-know)
+8. [每个程序员应该知道...](https://github.com/mr-mig/every-programmer-should-know)
 ### JavaScript
 
 ----------------------------------------------------------------------------------
