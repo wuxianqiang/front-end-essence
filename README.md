@@ -8,7 +8,7 @@ Web前端技术由html、css和javascript三大部分构成，是一个庞大而
 
 ### 前端
 
-1.[Array语法清单](Array类型)
+1. [Array语法清单](#Array类型)
 
 ### 资料
 
