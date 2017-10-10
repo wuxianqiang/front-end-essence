@@ -11,7 +11,7 @@ Web前端技术由html、css和javascript三大部分构成，是一个庞大而
 1. [String语法清单](#String类型)
 2. [Array语法清单](#Array类型)
 3. [Object语法清单](#Object类型)
-4. [DOM语法清单](DOM)
+4. [DOM语法清单](#DOM)
 
 ### 资料
 
