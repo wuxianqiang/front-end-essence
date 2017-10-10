@@ -17,6 +17,7 @@ Web前端技术由html、css和javascript三大部分构成，是一个庞大而
 7. [学习正则](https://github.com/zeeshanu/learn-regex/blob/master/README-cn.md#52-%E5%85%A8%E5%B1%80%E6%90%9C%E7%B4%A2-global-search)
 8. [每个程序员应该知道...](https://github.com/mr-mig/every-programmer-should-know)
 9. [现代的JavaScript语法清单]()
+10. [ 图片优化指南](https://images.guide/)
 ### JavaScript
 
 ----------------------------------------------------------------------------------
