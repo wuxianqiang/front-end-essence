@@ -9,10 +9,6 @@ Web前端技术由html、css和javascript三大部分构成，是一个庞大而
 ### 前端
 
 1. :arrow_down: [下载JavaScript知识结构图](https://github.com/wuxianqiang/learning-course/releases)
-2. :page_with_curl: [String语法清单](#String类型)
-3. :page_with_curl: [Array语法清单](#Array类型)
-4. :page_with_curl: [Object语法清单](#Object类型)
-5. :page_with_curl: [DOM语法清单](#DOM)
 
 ### 资料
 
