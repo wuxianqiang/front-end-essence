@@ -12,13 +12,13 @@ Web前端技术由html、css和javascript三大部分构成，是一个庞大而
 
 ### 资料
 
-1. [GitHub秘籍](https://github.com/tiimgreen/github-cheat-sheet/blob/master/README.zh-cn.md#markdown-%E6%96%87%E4%BB%B6%E8%AF%AD%E6%B3%95%E9%AB%98%E4%BA%AE)
+1. [GitHub秘籍](https://github.com/tiimgreen/github-cheat-sheet/blob/master/README.zh-cn.md)
 2. [七天学会NodeJS](http://nqdeng.github.io/7-days-nodejs/)
 3. [构建单页Web应用](https://github.com/xufei/blog/issues/5)
 4. [ES6新特性](http://es6-features.org/#Constants)
 5. [Vue语法清单](https://vuejs-tips.github.io/cheatsheet/)
 6. [3D动画](https://desandro.github.io/3dtransforms/)
-7. [学习正则](https://github.com/zeeshanu/learn-regex/blob/master/README-cn.md#52-%E5%85%A8%E5%B1%80%E6%90%9C%E7%B4%A2-global-search)
+7. [学习正则](https://github.com/zeeshanu/learn-regex/blob/master/README-cn.md)
 8. [每个程序员应该知道...](https://github.com/mr-mig/every-programmer-should-know)
 9. [现代的JavaScript语法清单](https://github.com/mbeaudru/modern-js-cheatsheet)
 10. [ 图片优化指南](https://images.guide/)
