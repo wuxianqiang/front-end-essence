@@ -162,20 +162,6 @@ Fn.y = 100;
 
 --------------------------------------------------------------------
 
-#### this问题
-
-```js
-function mycall(){
-    //假设已经更改了this
-    this();
-}
-Function.prototype.call = mycall;
-fn1.call.call(fn2); //fn1.call只是找到了call
-mycall.call(fn2);   //然后改变this再执行，this变成了fn2
-fn1.call.call.call(fn2);    //fn1.call.call只是找到了call
-```
-------------------------------------------------------------------------
-
 #### 数值转换
 
 有3个函数可以把非数值转换为数值：`Number()`、`parseInt()` 和 `parseFloat()`。第一个函数，即转型函数 `Number()` 可以用于任何数据类型，而另两个函数则专门用于把字符串转换成数值。`parseInt()` 提供第二个参数，转换时使用的基数（即多少进制）。多数情况下，我们要解析的都是十进制数值，因此始终将10作为第二个参数是非常必要的
@@ -341,7 +327,7 @@ ECMAScript 5还新增了两个缩小数组的方法： `reduce()` 和 `reduceRig
 [[Set]] ：在写入属性时调用的函数。默认值为 undefined 。
 ```
 
-* 访问器属性不能直接定义，必须使用 Object.defineProperty() 来定义。
+* 访问器属性不能直接定义，必须使用 `Object.defineProperty()` 来定义。
 
 ##### 4. ECMAScript中定义多个属性
 * 由于为对象定义多个属性的可能性很大，ECMAScript  5又定义了一个 `Object.defineProperties()` 方法。利用这个方法可以通过描述符一次定义多个属
@@ -406,5 +392,6 @@ previousElementSibling ：指向前一个同辈元素； previousSibling 的元�
 nextElementSibling ：指向后一个同辈元素； nextSibling 的元素版。
 ```
 
+##### 6. HTML5
 
-> 支持作者请点击右上角的Star按钮。
+> 支持作者请点击右上角的Star按钮。:star:
