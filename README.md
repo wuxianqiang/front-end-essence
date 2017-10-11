@@ -1,6 +1,6 @@
 # Web前端精髓
 
-![前端](https://raw.githubusercontent.com/wuxianqiang/learning-course/master/logo.jpg)
+![前端](https://raw.githubusercontent.com/wuxianqiang/learning-course/master/logo2.jpg)
 
 Web前端技术由html、css和javascript三大部分构成，是一个庞大而复杂的技术体系，其复杂程度不低于任何一门后端语言。而我们在学习它的时候往往是先从某一个点切入，然后不断地接触和学习新的知识点，因此对于初学者很难理清楚整个体系的脉络结构。所以，这篇文章参考网上资料和个人学习经验对前端核心知识进行归纳总结。
 
