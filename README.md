@@ -343,15 +343,15 @@ ECMAScript 5还新增了两个缩小数组的方法： `reduce()` 和 `reduceRig
 
 * 访问器属性不能直接定义，必须使用 Object.defineProperty() 来定义。
 
-##### 4. ECMAScript中的定义多个属性
+##### 4. ECMAScript中定义多个属性
 * 由于为对象定义多个属性的可能性很大，ECMAScript  5又定义了一个 `Object.defineProperties()` 方法。利用这个方法可以通过描述符一次定义多个属
 性。这个方法接收两个对象参数：第一个对象是要添加和修改其属性的对象，第二个对象的属性与第一个对象中要添加或修改的属性一一对应。
 
-##### 5. ECMAScript中的读取属性的特性
+##### 5. ECMAScript中读取属性的特性
 
 * 使用ECMAScript 5的 `Object.getOwnPropertyDescriptor()` 方法，可以取得给定属性的描述符。这个方法接收两个参数：属性所在的对象和要读取其描述符的属性名称。返回值是一个对象，如果是访问器属性，这个对象的属性有 `configurable` 、 `enumerable` 、 `get` 和 `set` ；如果是数据属性，这个对象的属性有 `configurable` 、 `enumerable` 、 `writable` 和 `value` 。
 
-##### 3. ES6方法
+##### 6. ES6方法
 
 * ES6 允许直接写入变量和函数，作为对象的属性和方法。
 * ES6 提出“Same-value equality”（同值相等）算法，用来解决这个问题。`Object.is` 就是部署这个算法的新方法。它用来比较两个值是否严格相等，与严格比较运算符（===）的行为基本一致。
