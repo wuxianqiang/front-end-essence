@@ -404,6 +404,8 @@ HTMLDocument->Document->Node->EventTarget->Object
  ```js
 a链接的原型链
 HTMLAnchorElement->HTMLElement->Element->Node->EventTarget->Object
+body元素的原型链
+HTMLBodyElement->HTMLElement->Element->Node->EventTarget->Object
  ```
 
 > 支持作者请点击右上角的Star按钮。:star:
