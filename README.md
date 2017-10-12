@@ -392,6 +392,12 @@ previousElementSibling ：指向前一个同辈元素； previousSibling 的元�
 nextElementSibling ：指向后一个同辈元素； nextSibling 的元素版。
 ```
 
-##### 6. HTML5
+##### 6. Document类型
+JavaScript通过 Document 类型表示文档。在浏览器中， `document` 对象是 `HTMLDocument` （继承自 Document 类型）的一个实例，表示整个HTML页面。而且， `document` 对象是 `window` 对象的一个属性，因此可以将其作为全局对象来访问。
+```js
+dir(document)
+#document->HTMLDocument->Document->Node->EventTarget->Object
+```
+
 
 > 支持作者请点击右上角的Star按钮。:star:
