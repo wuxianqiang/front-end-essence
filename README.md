@@ -402,8 +402,8 @@ HTMLDocument->Document->Node->EventTarget->Object
 ##### 7. Element类型
  Element 类型用于表现XML或HTML元素，提供了对元素标签名、子节点及特性的访问。所有HTML元素都由 `HTMLElement` 类型表示，不是直接通过这个类型，也是通过它的子类型来表示。 `HTMLElement` 类型直接继承自 `Element` 并添加了一些属性。
  ```js
-div元素的原型链
-HTMLDivDocument->HTMLElement->Element->Node->EventTarget->Object
+a链接的原型链
+HTMLAnchorElement->HTMLElement->Element->Node->EventTarget->Object
  ```
 
 > 支持作者请点击右上角的Star按钮。:star:
