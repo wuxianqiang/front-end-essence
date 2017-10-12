@@ -395,15 +395,15 @@ nextElementSibling ：指向后一个同辈元素； nextSibling 的元素版。
 ##### 6. Document类型
 JavaScript通过 Document 类型表示文档。在浏览器中， `document` 对象是 `HTMLDocument` （继承自 Document 类型）的一个实例，表示整个HTML页面。而且， `document` 对象是 `window` 对象的一个属性，因此可以将其作为全局对象来访问。
 ```js
-dir(document)
-#document->HTMLDocument->Document->Node->EventTarget->Object
+document的原型链
+HTMLDocument->Document->Node->EventTarget->Object
 ```
 
 ##### 7. Element类型
  Element 类型用于表现XML或HTML元素，提供了对元素标签名、子节点及特性的访问。所有HTML元素都由 `HTMLElement` 类型表示，不是直接通过这个类型，也是通过它的子类型来表示。 `HTMLElement` 类型直接继承自 `Element` 并添加了一些属性。
  ```js
-dir(div)
-DIV->HTMLDivDocument->HTMLElement->Element->Node->EventTarget->Object
+div元素的原型链
+HTMLDivDocument->HTMLElement->Element->Node->EventTarget->Object
  ```
 
 > 支持作者请点击右上角的Star按钮。:star:
