@@ -9,7 +9,7 @@ Web前端技术由html、css和javascript三大部分构成，是一个庞大而
 ### 前端
 
 1. :arrow_down: [下载JavaScript知识结构图](https://github.com/wuxianqiang/learning-course/releases)
-2. DOM深入理解
+2. [DOM深入理解](https://github.com/wuxianqiang/front-end-essence/issues/29)
 
 ### 资料
 
