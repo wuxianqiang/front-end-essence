@@ -398,6 +398,9 @@ JavaScript通过 Document 类型表示文档。在浏览器中， `document` 对
 document的原型链
 HTMLDocument->Document->Node->EventTarget->Object
 ```
+* 文档的子节点，第一个就是 `documentElement` 属性，该属性始终指向HTML页面中的`<html>`。
+* 作为 `HTMLDocument` 的实例，`document` 对象还有一个 `body` 属性，直接指向`<body>`元素。
+* 所以浏览器都支持 `document.documentElement` 和 `document.body` 属性。
 
 ##### 7. Element类型
  Element 类型用于表现XML或HTML元素，提供了对元素标签名、子节点及特性的访问。所有HTML元素都由 `HTMLElement` 类型表示，不是直接通过这个类型，也是通过它的子类型来表示。 `HTMLElement` 类型直接继承自 `Element` 并添加了一些属性。
