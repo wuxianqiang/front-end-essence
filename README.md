@@ -9,8 +9,12 @@ Web前端技术由html、css和javascript三大部分构成，是一个庞大而
 ### 前端
 
 1. :arrow_down: [下载JavaScript知识结构图](https://github.com/wuxianqiang/learning-course/releases)
-2. [请写出关于Number这个类原型链上所有属性和方法的含义和作用？]()
-
+2. [请写出关于Object这个类原型链上所有属性和方法的含义和作用？](https://github.com/wuxianqiang/front-end-essence/issues/39)
+3. [请写出关于Function这个类原型链上所有属性和方法的含义和作用？](https://github.com/wuxianqiang/front-end-essence/issues/38)
+2. [请写出关于Boolean这个类原型链上所有属性和方法的含义和作用？](https://github.com/wuxianqiang/front-end-essence/issues/37)
+2. [请写出关于Array这个类原型链上所有属性和方法的含义和作用？](https://github.com/wuxianqiang/front-end-essence/issues/36)
+2. [请写出关于String这个类原型链上所有属性和方法的含义和作用？](https://github.com/wuxianqiang/front-end-essence/issues/35)
+2. [请写出关于Number这个类原型链上所有属性和方法的含义和作用？](https://github.com/wuxianqiang/front-end-essence/issues/34)
 
 ### 资料
 
