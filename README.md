@@ -9,12 +9,12 @@ Web前端技术由html、css和javascript三大部分构成，是一个庞大而
 ### 问题
 
 1. 请先阅读下面6个问题，来检测你是否有必要阅读这篇文章。👏
-❓ [请写出关于Object这个类原型链上所有属性和方法的含义和作用？](https://github.com/wuxianqiang/front-end-essence/issues/39)
-❓ [请写出关于Function这个类原型链上所有属性和方法的含义和作用？](https://github.com/wuxianqiang/front-end-essence/issues/38)
-❓ [请写出关于Boolean这个类原型链上所有属性和方法的含义和作用？](https://github.com/wuxianqiang/front-end-essence/issues/37)
-❓ [请写出关于Array这个类原型链上所有属性和方法的含义和作用？](https://github.com/wuxianqiang/front-end-essence/issues/36)
-❓ [请写出关于String这个类原型链上所有属性和方法的含义和作用？](https://github.com/wuxianqiang/front-end-essence/issues/35)
-❓ [请写出关于Number这个类原型链上所有属性和方法的含义和作用？](https://github.com/wuxianqiang/front-end-essence/issues/34)
+* ❓ [请写出关于Object这个类原型链上所有属性和方法的含义和作用？](https://github.com/wuxianqiang/front-end-essence/issues/39)
+* ❓ [请写出关于Function这个类原型链上所有属性和方法的含义和作用？](https://github.com/wuxianqiang/front-end-essence/issues/38)
+* ❓ [请写出关于Boolean这个类原型链上所有属性和方法的含义和作用？](https://github.com/wuxianqiang/front-end-essence/issues/37)
+* ❓ [请写出关于Array这个类原型链上所有属性和方法的含义和作用？](https://github.com/wuxianqiang/front-end-essence/issues/36)
+* ❓ [请写出关于String这个类原型链上所有属性和方法的含义和作用？](https://github.com/wuxianqiang/front-end-essence/issues/35)
+* ❓ [请写出关于Number这个类原型链上所有属性和方法的含义和作用？](https://github.com/wuxianqiang/front-end-essence/issues/34)
 
 ### 资料
 
