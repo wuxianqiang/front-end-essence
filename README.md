@@ -8,26 +8,26 @@ Web前端技术由html、css和javascript三大部分构成，是一个庞大而
 
 ### 前端
 
-1. :arrow_down: [下载JavaScript知识结构图](https://github.com/wuxianqiang/learning-course/releases)
-2. [请写出关于Object这个类原型链上所有属性和方法的含义和作用？](https://github.com/wuxianqiang/front-end-essence/issues/39)
+1. 请先阅读下面6个问题，来检测你是否有必要阅读这篇文章。👏
+2. s[请写出关于Object这个类原型链上所有属性和方法的含义和作用？](https://github.com/wuxianqiang/front-end-essence/issues/39)
 3. [请写出关于Function这个类原型链上所有属性和方法的含义和作用？](https://github.com/wuxianqiang/front-end-essence/issues/38)
-2. [请写出关于Boolean这个类原型链上所有属性和方法的含义和作用？](https://github.com/wuxianqiang/front-end-essence/issues/37)
-2. [请写出关于Array这个类原型链上所有属性和方法的含义和作用？](https://github.com/wuxianqiang/front-end-essence/issues/36)
-2. [请写出关于String这个类原型链上所有属性和方法的含义和作用？](https://github.com/wuxianqiang/front-end-essence/issues/35)
-2. [请写出关于Number这个类原型链上所有属性和方法的含义和作用？](https://github.com/wuxianqiang/front-end-essence/issues/34)
+4. [请写出关于Boolean这个类原型链上所有属性和方法的含义和作用？](https://github.com/wuxianqiang/front-end-essence/issues/37)
+5. [请写出关于Array这个类原型链上所有属性和方法的含义和作用？](https://github.com/wuxianqiang/front-end-essence/issues/36)
+6. [请写出关于String这个类原型链上所有属性和方法的含义和作用？](https://github.com/wuxianqiang/front-end-essence/issues/35)
+7. [请写出关于Number这个类原型链上所有属性和方法的含义和作用？](https://github.com/wuxianqiang/front-end-essence/issues/34)
 
 ### 资料
 
-1. [ES6新特性](http://es6-features.org/#Constants)
-2. [学习正则](https://github.com/zeeshanu/learn-regex/blob/master/README-cn.md)
-3. [Vue语法清单](https://vuejs-tips.github.io/cheatsheet/)
-4. [3D动画](https://desandro.github.io/3dtransforms/)
-5. [前端面试问题](https://github.com/h5bp/Front-end-Developer-Interview-Questions)
-6. [GitHub秘籍](https://github.com/tiimgreen/github-cheat-sheet/blob/master/README.zh-cn.md)
-7. [构建单页Web应用](https://github.com/xufei/blog/issues/5)
-8. [每个程序员应该知道...](https://github.com/mr-mig/every-programmer-should-know)
-9. [现代的JavaScript语法清单](https://github.com/mbeaudru/modern-js-cheatsheet)
-10. [图片优化指南](https://images.guide/)
+1. [下载JavaScript知识结构图](https://github.com/wuxianqiang/learning-course/releases)
+2. [ES6新特性](http://es6-features.org/#Constants)
+3. [学习正则](https://github.com/zeeshanu/learn-regex/blob/master/README-cn.md)
+4. [Vue语法清单](https://vuejs-tips.github.io/cheatsheet/)
+5. [3D动画](https://desandro.github.io/3dtransforms/)
+6. [前端面试问题](https://github.com/h5bp/Front-end-Developer-Interview-Questions)
+7. [GitHub秘籍](https://github.com/tiimgreen/github-cheat-sheet/blob/master/README.zh-cn.md)
+8. [构建单页Web应用](https://github.com/xufei/blog/issues/5)
+9. [每个程序员应该知道...](https://github.com/mr-mig/every-programmer-should-know)
+10. [现代的JavaScript语法清单](https://github.com/mbeaudru/modern-js-cheatsheet)
 
 ### JavaScript
 
