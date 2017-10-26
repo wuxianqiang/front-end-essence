@@ -408,8 +408,8 @@ HTMLBodyElement->HTMLElement->Element->Node->EventTarget->Object
 * `moveTo(x, y)` ：将绘图游标移动到 `(x,y)` ，不画线。
 * `quadraticCurveTo(cx, cy, x, y)` ：从上一点开始绘制一条二次曲线，到 `(x,y)`为止，并且以 `(cx,cy)` 作为控制点。
 * rect(x, y, width, height) ：从点 `(x,y)` 开始绘制一个矩形，宽度和高度分别由 `width` 和 `height` 指定。这个方法绘制的是矩形路径，而不是 `strokeRect()` 和 `fillRect()` 所绘制的独立的形状。
-* 创建了路径后，接下来有几种可能的选择。如果想绘制一条连接到路径起点的线条，可以调用 `closePath()` 。如果路径已经完成，你想用 `fillStyle` 填充它，可以调用 `fill()` 方法。另外，还可以调用 `stroke()` 方法对路径描边，描边使用的是 `strokeStyle` 。最后还可以调用 `clip()` ，这个方法可以在路径上创建一个剪切区域。
+* 创建了路径后，接下来有几种可能的选择。如果想绘制一条连接到路径起点的线条，可以调用 `closePath()` 。如果路径已经完成，你想用 `fillStyle` 填充它，可以调用 `fill()` 方法。另外，还可以调用 `stroke()` 方法对路径描边，描边使用的是 `strokeStyle` 。最后还可以调用 `clip()` ，这个方法可以在路径上创建一个剪切区域。[Top](#readme)
 
 ## 最后
 
-### 喜欢的小伙伴们请点一下右上脚star按钮:star:收藏请点Fork按钮。
+### 喜欢的小伙伴们请点一下右上脚star按钮:star:收藏请点Fork按钮。[Top](#readme)
