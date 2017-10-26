@@ -412,4 +412,4 @@ HTMLBodyElement->HTMLElement->Element->Node->EventTarget->Object
 
 ## 最后
 
-### 支持作者请点击右上角的Star按钮。:star:
+### 喜欢的小伙伴们请点一下右上脚star按钮:star:收藏请点Fork按钮。
