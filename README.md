@@ -397,11 +397,19 @@ JavaScript通过 Document 类型表示文档。在浏览器中， `document` 对
 document的原型链
 HTMLDocument->Document->Node->EventTarget->Object
 ```
+文档的子节点
+
 * 文档的子节点，第一个就是 `documentElement` 属性，该属性始终指向HTML页面中的`<html>`。
 * 作为 `HTMLDocument` 的实例，`document` 对象还有一个 `body` 属性，直接指向`<body>`元素。
 * 所以浏览器都支持 `document.documentElement` 和 `document.body` 属性。
+
+文档信息
+
 * 作为 `HTMLDocument` 的一个实例， `document` 对象还有一些标准的 Document 对象所没有的属性。这些属性提供了 `document` 对象所表现的网页的一些信息。其中第一个属性就是 `title` ，包含着 `<title>` 元素中的文本——显示在浏览器窗口的标题栏或标签页上。通过这个属性可以取得当前页面的标题，也可以修改当前页面的标题并反映在浏览器的标题栏中。修改 `title` 属性的值不会改变 `<title>` 元素。
 * 接下来要介绍的3个属性都与对网页的请求有关，它们是 `URL` 、 `domain` 和 `referrer` 。 `URL` 属性中包含页面完整的 `URL`（即地址栏中显示的URL）， domain 属性中只包含页面的域名，而 `referrer` 属性中则保存着链接到当前页面的那个页面的 `URL` 。在没有来源页面的情况下， `referrer` 属性中可能会包含空字符串。所有这些信息都存在于请求的HTTP头部，只不过是通过这些属性让我们能够在JavaScrip中访问它们而已。
+
+查找元素
+
 * 取得元素的操作可以使用 `document` 对象的几个方法来完成。其中， Document 类型为此提供了两个方法： `getElementById()` 和 `getElementsByTagName()` 。
 
 ### Element类型
