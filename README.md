@@ -6,6 +6,7 @@ Web前端技术由html、css和javascript三大部分构成，是一个庞大而
 
 ## 目录
 * [JavaScript基础](#JavaScript基础)
+* [String类型](#String类型)
 
 ### 问题
 
