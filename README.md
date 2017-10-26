@@ -7,7 +7,7 @@ Web前端技术由html、css和javascript三大部分构成，是一个庞大而
 ## 目录
 - [JavaScript基础](#javascript基础)
 - [String类型](#string类型)
-- [Array](#array类型)
+- [Array类型](#array类型)
 - [Object类型](#object类型)
 - [DOM文档对象模型](#dom文档对象模型)
 - [canvas绘图](#canvas绘图)
@@ -15,7 +15,7 @@ Web前端技术由html、css和javascript三大部分构成，是一个庞大而
 
 ### 问题
 
-1. 请先阅读下面6个问题，来检测你是否需要阅读这篇文章。👏
+请先阅读下面6个问题，来检测你是否需要阅读这篇文章。👏
 * ❓ [请写出关于Object这个类原型链上所有属性和方法的含义和作用？](https://github.com/wuxianqiang/front-end-essence/issues/39)
 * ❓ [请写出关于Function这个类原型链上所有属性和方法的含义和作用？](https://github.com/wuxianqiang/front-end-essence/issues/38)
 * ❓ [请写出关于Boolean这个类原型链上所有属性和方法的含义和作用？](https://github.com/wuxianqiang/front-end-essence/issues/37)
@@ -25,16 +25,16 @@ Web前端技术由html、css和javascript三大部分构成，是一个庞大而
 
 ### 资料
 
-1. [下载JavaScript知识结构图](https://github.com/wuxianqiang/learning-course/releases)
-2. [ES6新特性](http://es6-features.org/#Constants)
-3. [学习正则](https://github.com/zeeshanu/learn-regex/blob/master/README-cn.md)
-4. [Vue语法清单](https://vuejs-tips.github.io/cheatsheet/)
-5. [3D动画](https://desandro.github.io/3dtransforms/)
-6. [前端面试问题](https://github.com/h5bp/Front-end-Developer-Interview-Questions)
-7. [GitHub秘籍](https://github.com/tiimgreen/github-cheat-sheet/blob/master/README.zh-cn.md)
-8. [构建单页Web应用](https://github.com/xufei/blog/issues/5)
-9. [每个程序员应该知道...](https://github.com/mr-mig/every-programmer-should-know)
-10. [现代的JavaScript语法清单](https://github.com/mbeaudru/modern-js-cheatsheet)
+* [下载JavaScript知识结构图](https://github.com/wuxianqiang/learning-course/releases)
+* [ES6新特性](http://es6-features.org/#Constants)
+* [学习正则](https://github.com/zeeshanu/learn-regex/blob/master/README-cn.md)
+* [Vue语法清单](https://vuejs-tips.github.io/cheatsheet/)
+* [3D动画](https://desandro.github.io/3dtransforms/)
+* [前端面试问题](https://github.com/h5bp/Front-end-Developer-Interview-Questions)
+* [GitHub秘籍](https://github.com/tiimgreen/github-cheat-sheet/blob/master/README.zh-cn.md)
+* [每个程序员应该知道...](https://github.com/mr-mig/every-programmer-should-know)
+* [现代的JavaScript语法清单](https://github.com/mbeaudru/modern-js-cheatsheet)
+* [构建单页Web应用](https://github.com/xufei/blog/issues/5)
 
 ## JavaScript基础
 
