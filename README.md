@@ -10,6 +10,7 @@ Web前端技术由html、css和javascript三大部分构成，是一个庞大而
 - [Array](#array类型)
 - [Object类型](#object类型)
 - [DOM文档对象模型](#dom文档对象模型)
+- [canvas绘图](#canvas绘图)
 
 
 ### 问题
