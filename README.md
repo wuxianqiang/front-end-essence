@@ -417,5 +417,11 @@ HTMLAnchorElement->HTMLElement->Element->Node->EventTarget->Object
 body元素的原型链
 HTMLBodyElement->HTMLElement->Element->Node->EventTarget->Object
  ```
+ 
+ ## canvas绘图
+ 使用2D绘图上下文提供的方法，可以绘制简单的2D图形，比如矩形、弧线和路径。2D上下文的坐标开始于 `<canvas>` 元素的左上角，原点坐标是 `(0,0)`。所有坐标值都基于这个原点计算，x值越大表示越靠右，y值越大表示越靠下。默认情况下， `width` 和 `height` 表示水平和垂直两个方向上可用的像素数目。
+
+* 填充和描边
+2D上下文的两种基本绘图操作是填充和描边。填充，就是用指定的样式（颜色、渐变或图像）填充图形；描边，就是只在图形的边缘画线。大多数2D上下文操作都会细分为填充和描边两个操作，而操作的结果取决于两个属性： `fillStyle` 和 `strokeStyle` 。
 
 > 支持作者请点击右上角的Star按钮。:star:
