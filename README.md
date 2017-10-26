@@ -410,7 +410,8 @@ HTMLDocument->Document->Node->EventTarget->Object
 
 查找元素
 
-* 取得元素的操作可以使用 `document` 对象的几个方法来完成。其中， Document 类型为此提供了两个方法： `getElementById()` 和 `getElementsByTagName()` 。
+* 取得元素的操作可以使用 `document` 对象的几个方法来完成。其中， Document 类型为此提供了两个方法： `getElementById()` 和 `getElementsByTagName()` 。 `getElementById()` 只返回文档中第一次出现的元素。IE7及较低版本还为此方法添加了一个有意思的“怪癖”： `name` 特性与给定ID匹配的表单元素（ `<input>` 、 `<textarea>` 、 `<button>` 及 `<select>` ）也会被该方法返回。如果有哪个表单元素的 `name` 特性等于指定的ID，而且该元素在文档中位于带有给定ID的元素前面，那么IE就会返回那个表单元素。另一个常用于取得元素引用的方法是 `getElementsByTagName()` 。这个方法接受一个参数，即要取得元素的标签名，而返回的是包含零或多个元素的 `NodeList` 。在HTML文档中，这个方法会返回一个 `HTMLCollection` 对象，作为一个“动态”集合，该对象与 `NodeList` 非常类似。
+* 第三个方法，也是只有 `HTMLDocument` 类型才有的方法，是 `getElementsByName()` 。顾名思义，这个方法会返回带有给定 `name` 特性的所有元素。最常使用 `getElementsByName()` 方法的情况是取得单选按钮；为了确保发送给浏览器的值正确无误，所有单选按钮必须具有相同的 `name` 特性
 
 ### Element类型
  Element 类型用于表现XML或HTML元素，提供了对元素标签名、子节点及特性的访问。所有HTML元素都由 `HTMLElement` 类型表示，不是直接通过这个类型，也是通过它的子类型来表示。 `HTMLElement` 类型直接继承自 `Element` 并添加了一些属性。
@@ -420,6 +421,22 @@ HTMLAnchorElement->HTMLElement->Element->Node->EventTarget->Object
 body元素的原型链
 HTMLBodyElement->HTMLElement->Element->Node->EventTarget->Object
  ```
+HTML元素
+
+* `id` ，元素在文档中的唯一标识符。
+* `title` ，有关元素的附加说明信息，一般通过工具提示条显示出来。
+* `lang` ，元素内容的语言代码，很少使用。
+* `dir` ，语言的方向，值为 “ltr” （left-to-right，从左至右）或 “rtl” （right-to-left，从右至左），也很少使用。
+* `className` ，与元素的 `class` 特性对应，即为元素指定的CSS类。没有将这个属性命名为 class ，是因为 class 是ECMAScript的保留字
+* 每个元素都有一或多个特性，这些特性的用途是给出相应元素或其内容的附加信息。操作特性的DOM方法主要有三个，分别是 `getAttribute()` 、 `setAttribute()` 和 `removeAttribute()` 。这三个方法可以针对任何特性使用，包括那些以 HTMLElement类型属性的形式定义的特性。
+ 
+ 创建元素
+ 
+ * 使用 `document.createElement()` 方法可以创建新元素。这个方法只接受一个参数，即要创建元素的标签名。这个标签名在HTML文档中不区分大小写，而在XML（包括XHTML）文档中，则是区分大小写的。在新元素上设置这些特性只是给它们赋予了相应的信息。由于新元素尚未被添加到文档树中，因此设置这些特性不会影响浏览器的显示。要把新元素添加到文档树，可以使用 `appendChild()` 、 `insertBefore()` 或 `replaceChild()` 方法。
+ 
+ 元素的子节点
+ 
+ * 元素可以有任意数目的子节点和后代节点，因为元素可以是其他元素的子节点。元素的 `childNodes` 属性中包含了它的所有子节点，这些子节点有可能是元素、文本节点、注释或处理指令。不同浏览器在看待这些节点方面存在显著的不同。
  
  ## canvas绘图
  使用2D绘图上下文提供的方法，可以绘制简单的2D图形，比如矩形、弧线和路径。2D上下文的坐标开始于 `<canvas>` 元素的左上角，原点坐标是 `(0,0)`。所有坐标值都基于这个原点计算，x值越大表示越靠右，y值越大表示越靠下。默认情况下， `width` 和 `height` 表示水平和垂直两个方向上可用的像素数目。
