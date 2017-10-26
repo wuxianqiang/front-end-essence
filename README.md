@@ -298,7 +298,7 @@ ECMAScript 5还新增了两个缩小数组的方法： `reduce()` 和 `reduceRig
 
 ## Object类型
 
-## Object的每个实例都具有下列属性和方法
+### Object的每个实例都具有下列属性和方法
 
 * `Constructor` ：保存着用于创建当前对象的函数。
 * `hasOwnProperty(propertyName)` ：用于检查给定的属性在当前对象实例中（而不是在实例的原型中）是否存在。其中，作为参数的属性名（ `propertyName` ）必须以字符串形式指定（例如： `o.hasOwnProperty(“name”)` ）。
@@ -410,5 +410,6 @@ HTMLBodyElement->HTMLElement->Element->Node->EventTarget->Object
 * rect(x, y, width, height) ：从点 `(x,y)` 开始绘制一个矩形，宽度和高度分别由 `width` 和 `height` 指定。这个方法绘制的是矩形路径，而不是 `strokeRect()` 和 `fillRect()` 所绘制的独立的形状。
 * 创建了路径后，接下来有几种可能的选择。如果想绘制一条连接到路径起点的线条，可以调用 `closePath()` 。如果路径已经完成，你想用 `fillStyle` 填充它，可以调用 `fill()` 方法。另外，还可以调用 `stroke()` 方法对路径描边，描边使用的是 `strokeStyle` 。最后还可以调用 `clip()` ，这个方法可以在路径上创建一个剪切区域。
 
+## 最后
 
-> 支持作者请点击右上角的Star按钮。:star:
+### 支持作者请点击右上角的Star按钮。:star:
