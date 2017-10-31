@@ -13,28 +13,18 @@ Web前端技术由html、css和javascript三大部分构成，是一个庞大而
 - [canvas绘图](#canvas绘图)
 - [前端案例](https://github.com/wuxianqiang/project)
 
-
-### 问题
-
-请先阅读下面6个问题，来检测你是否需要阅读这篇文章。👏
-* ❓ [请写出关于Object这个类原型链上所有属性和方法的含义和作用？](https://github.com/wuxianqiang/front-end-essence/issues/39)
-* ❓ [请写出关于Function这个类原型链上所有属性和方法的含义和作用？](https://github.com/wuxianqiang/front-end-essence/issues/38)
-* ❓ [请写出关于Boolean这个类原型链上所有属性和方法的含义和作用？](https://github.com/wuxianqiang/front-end-essence/issues/37)
-* ❓ [请写出关于Array这个类原型链上所有属性和方法的含义和作用？](https://github.com/wuxianqiang/front-end-essence/issues/36)
-* ❓ [请写出关于String这个类原型链上所有属性和方法的含义和作用？](https://github.com/wuxianqiang/front-end-essence/issues/35)
-* ❓ [请写出关于Number这个类原型链上所有属性和方法的含义和作用？](https://github.com/wuxianqiang/front-end-essence/issues/34)
-
 ### 资料
 
 * [下载JavaScript知识结构图](https://github.com/wuxianqiang/learning-course/releases)
-* [ES6新特性](http://es6-features.org/#Constants)
-* [学习正则](https://github.com/zeeshanu/learn-regex/blob/master/README-cn.md)
+* [现代的JavaScript语法清单](https://github.com/mbeaudru/modern-js-cheatsheet) 所有的JavaScript语法都在这里，教会你怎样使用，提高JavaScript基础知识
+* [ES6新特性](http://es6-features.org/#Constants) 通过ECMA5和ES6的语法对比，能够很快的掌握ES6的新特性新方法
+* [学习正则](https://github.com/zeeshanu/learn-regex/blob/master/README-cn.md) 正则可以很复杂
 * [Vue语法清单](https://vuejs-tips.github.io/cheatsheet/)
 * [3D动画](https://desandro.github.io/3dtransforms/)
+* [head文档](https://github.com/joshbuchea/HEAD/blob/master/README.md)
 * [前端面试问题](https://github.com/h5bp/Front-end-Developer-Interview-Questions)
 * [GitHub秘籍](https://github.com/tiimgreen/github-cheat-sheet/blob/master/README.zh-cn.md)
 * [每个程序员应该知道...](https://github.com/mr-mig/every-programmer-should-know)
-* [现代的JavaScript语法清单](https://github.com/mbeaudru/modern-js-cheatsheet)
 * [构建单页Web应用](https://github.com/xufei/blog/issues/5)
 
 ## JavaScript基础
