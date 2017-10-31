@@ -16,9 +16,9 @@ Web前端技术由html、css和javascript三大部分构成，是一个庞大而
 ### 资料
 
 * [下载JavaScript知识结构图](https://github.com/wuxianqiang/learning-course/releases)
-* [现代的JavaScript语法清单](https://github.com/mbeaudru/modern-js-cheatsheet) 所有的JavaScript语法都在这里，教会你怎样使用，提高JavaScript基础知识
-* [ES6新特性](http://es6-features.org/#Constants) 通过ECMA5和ES6的语法对比，能够很快的掌握ES6的新特性新方法
-* [学习正则](https://github.com/zeeshanu/learn-regex/blob/master/README-cn.md) 正则可以很复杂
+* [现代的JavaScript语法清单](https://github.com/mbeaudru/modern-js-cheatsheet)
+* [ES6新特性](http://es6-features.org/#Constants)
+* [学习正则](https://github.com/zeeshanu/learn-regex/blob/master/README-cn.md)
 * [Vue语法清单](https://vuejs-tips.github.io/cheatsheet/)
 * [3D动画](https://desandro.github.io/3dtransforms/)
 * [head文档](https://github.com/joshbuchea/HEAD/blob/master/README.md)
