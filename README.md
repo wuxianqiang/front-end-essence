@@ -305,6 +305,8 @@ ECMAScript 5还新增了两个缩小数组的方法： `reduce()` 和 `reduceRig
 
 ## Object类型
 
+对象最常见的用法是创建（create）、设置（set）、查找（query）、删除（delete）、检测（test）和枚举（enumerate）它的属性。
+
 ### Object的每个实例都具有下列属性和方法
 
 `Constructor` ：保存着用于创建当前对象的函数。
