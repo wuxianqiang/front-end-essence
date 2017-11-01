@@ -308,10 +308,28 @@ ECMAScript 5还新增了两个缩小数组的方法： `reduce()` 和 `reduceRig
 ### 基础知识
 
 对象最常见的用法是创建（create）、设置（set）、查找（query）、删除（delete）、检测（test）和枚举（enumerate）它的属性。
-ECMAScript 5定义了一个名为 `Object.create()` 的方法，它创建一个新对象，其中第一个参数是这个对象的原型。Object.create()提供第二个可选参数，用以对对象的属性进行进一步描述。`Object.create()` 是一个静态函数，而不是提供给某个对象调用的方法。使用它的方法很简单，只须传入所需的原型对象即可：
+ECMAScript 5定义了一个名为 `Object.create()` 的方法，它创建一个新对象，其中第一个参数是这个对象的原型。`Object.create()` 提供第二个可选参数，用以对对象的属性进行进一步描述。`Object.create()` 是一个静态函数，而不是提供给某个对象调用的方法。使用它的方法很简单，只须传入所需的原型对象即可：
 
 ```js
 var o1=Object.create({x:1,y:2});//o1继承了属性x和y
+```
+模拟`Object.create()`
+```js
+        function inherit(p) {
+            if (p === null) {
+                throw TypeError
+            }
+            if (Object.create) {
+                return Object.create(p)
+            }
+            var t = typeof p;
+            if (t !== "object" && t !== "function") {
+                throw TypeError
+            }
+            function Fn() {};
+            Fn.prototype = p;
+            return new Fn()
+        }
 ```
 
 ### Object的每个实例都具有下列属性和方法
