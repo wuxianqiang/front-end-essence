@@ -334,6 +334,13 @@ var o1=Object.create({x:1,y:2});//o1继承了属性x和y
 
 JavaScript对象可以看做属性的集合，我们经常会检测集合中成员的所属关系——判断某个属性是否存在于某个对象中。可以通过 `in` 运算符、`hasOwnPreperty()` 和 `propertyIsEnumerable()` 方法来完成这个工作，甚至仅通过属性查询也可以做到这一点。
 
+```js
+        var obj = {age: undefined};
+        console.log("age" in obj) //true
+        console.log("age" === undefined) //false
+```
+然而有一种场景只能使用in运算符而不能使用属性访问的方式。
+
 ### Object的每个实例都具有下列属性和方法
 
 `Constructor` ：保存着用于创建当前对象的函数。
