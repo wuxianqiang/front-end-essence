@@ -318,6 +318,12 @@ JavaScript对象可以看做属性的集合，我们经常会检测集合中成�
 
 `propertyIsEnumerable()` 是 `hasOwnProperty()` 的增强版，只有检测到是自有属性且这个属性的可枚举性（enumerable attribute）为true时它才返回true。
 
+通过调用 `Object.getOwnPropertyDescriptor()` 可以获得某个对象特定属性的属性描述符。`Object.getOwnPropertyDescriptor()` 只能得到自有属性的描
+述符。要想获得继承属性的特性，需要遍历原型链。
+
+要想设置属性的特性，或者想让新建属性具有某种特性，则需要调用 `Object.definePeoperty()`，传入要修改的对象、要创建或修改的属性的名称以及属性描述符对象
+
+
 ### Object的每个实例都具有下列属性和方法
 
 `Constructor` ：保存着用于创建当前对象的函数。
