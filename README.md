@@ -317,14 +317,14 @@ var o1=Object.create({x:1,y:2});//o1继承了属性x和y
 ```js
         function inherit(p) {
             if (p === null) {
-                throw TypeError
-            }
+                throw TypeError()
+            }
             if (Object.create) {
                 return Object.create(p)
             }
             var t = typeof p;
             if (t !== "object" && t !== "function") {
-                throw TypeError
+                throw TypeError()
             }
             function Fn() {};
             Fn.prototype = p;
