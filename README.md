@@ -329,6 +329,10 @@ JavaScript对象可以看做属性的集合，我们经常会检测集合中成�
 
 如果要同时修改或创建多个属性，则需要使用 `Object.defineProperties()`。第一个参数是要修改的对象，第二个参数是一个映射表，它包含要新建或修改的属性的名称，以及它们的属性描述符。
 
+### 原型属性
+
+在ECMAScript 5中，将对象作为参数传入 `Object.getPrototypeOf()` 可以查询它的原型。在ECMAScript 3中，则没有与之等价的函数，但经常使用表达式
+`o.constructor.prototype` 来检测一个对象的原型。通过 `new` 表达式创建的对象，通常继承一个 `constructor` 属性，这个属性指代创建这个对象的构造函数。
 
 ### 实例方法
 
