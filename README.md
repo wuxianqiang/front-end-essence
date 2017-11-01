@@ -310,36 +310,13 @@ ECMAScript 5还新增了两个缩小数组的方法： `reduce()` 和 `reduceRig
 对象最常见的用法是创建（create）、设置（set）、查找（query）、删除（delete）、检测（test）和枚举（enumerate）它的属性。
 ECMAScript 5定义了一个名为 `Object.create()` 的方法，它创建一个新对象，其中第一个参数是这个对象的原型。`Object.create()` 提供第二个可选参数，用以对对象的属性进行进一步描述。`Object.create()` 是一个静态函数，而不是提供给某个对象调用的方法。使用它的方法很简单，只须传入所需的原型对象即可：
 
-```js
-var o1=Object.create({x:1,y:2});//o1继承了属性x和y
-```
-模拟`Object.create()`
-```js
-        function inherit(p) {
-            if (p === null) {
-                throw TypeError()
-            }
-            if (Object.create) {
-                return Object.create(p)
-            }
-            var t = typeof p;
-            if (t !== "object" && t !== "function") {
-                throw TypeError()
-            }
-            function Fn() {};
-            Fn.prototype = p;
-            return new Fn()
-        }
-```
-
 JavaScript对象可以看做属性的集合，我们经常会检测集合中成员的所属关系——判断某个属性是否存在于某个对象中。可以通过 `in` 运算符、`hasOwnPreperty()` 和 `propertyIsEnumerable()` 方法来完成这个工作，甚至仅通过属性查询也可以做到这一点。
 
-```js
-        var obj = {age: undefined};
-        console.log("age" in obj) //true
-        console.log("age" === undefined) //false
-```
-然而有一种场景只能使用in运算符而不能使用属性访问的方式。
+`in` 运算符的左侧是属性名（字符串），右侧是对象。如果对象的自有属性或继承属性中包含这个属性则返回 `true`
+
+对象的 `hasOwnProperty()` 方法用来检测给定的名字是否是对象的自有属性。对于继承属性它将返回 `false`
+
+`propertyIsEnumerable()` 是 `hasOwnProperty()` 的增强版，只有检测到是自有属性且这个属性的可枚举性（enumerable attribute）为true时它才返回true。
 
 ### Object的每个实例都具有下列属性和方法
 
