@@ -13,10 +13,6 @@ Web前端技术由html、css和javascript三大部分构成，是一个庞大而
 - [canvas绘图](#canvas绘图)
 - [前端案例](https://github.com/wuxianqiang/project)
 
-|shi|shi|shi|
-|-|-|-|
-|shi|shi|shi|
-
 ### 资料
 
 * [下载JavaScript知识结构图](https://github.com/wuxianqiang/learning-course/releases)
@@ -303,6 +299,12 @@ ECMAScript 5还新增了两个缩小数组的方法： `reduce()` 和 `reduceRig
 * ES6 提供三个新的方法——`entries()`，`keys()` 和 `values()`——用于遍历数组。它们都返回一个遍历器对象，可以用 `for...of` 循环进行遍历，唯一的区别是 `keys()` 是对键名的遍历、`values()` 是对键值的遍历，`entries()` 是对键值对的遍历。
 * `Array.prototype.includes` 方法返回一个布尔值，表示某个数组是否包含给定的值，与字符串的 `includes` 方法类似。ES2016 引入了该方法。
 * 数组的空位指，数组的某一个位置没有任何值。比如，Array构造函数返回的数组都是空位。
+
+### 归纳
+
+|数组方法|是否能操作原先数组|是否有返回值|返回的内容是|
+|-|-|-|-|
+|join()|否|是|返回最后生成的字符串
 
 **[⬆ back to top](#readme)**
 
