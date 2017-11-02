@@ -470,6 +470,8 @@ HTMLAnchorElement->HTMLElement->Element->Node->EventTarget->Object
 body元素的原型链
 HTMLBodyElement->HTMLElement->Element->Node->EventTarget->Object
  ```
+ HTML5还在Element对象上定义了 `dataset` 属性。该属性指代一个对象，它的各个属性对应于去掉前缀的 `data-` 属性。因此 `dataset.x` 应该保存 `data-x` 属性的值。带连字符的属性对应于驼峰命名法属性名：`data-jquery-test` 属性就变成 `dataset.jqueryTest` 属性。
+ 
 HTML元素
 
 * `id` ，元素在文档中的唯一标识符。
