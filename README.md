@@ -489,6 +489,16 @@ HTML元素
  
  * 元素可以有任意数目的子节点和后代节点，因为元素可以是其他元素的子节点。元素的 `childNodes` 属性中包含了它的所有子节点，这些子节点有可能是元素、文本节点、注释或处理指令。不同浏览器在看待这些节点方面存在显著的不同。
  
+ 归纳
+ 
+|offset开头|client开头|scroll开头|
+|-|-|-|
+|offsetWidth|clientWidth|scrollWidth|
+|offsetHeight|clientHeight|scrolHeight|
+|offsetLeft|clientLeft|scrollLeft|
+|offsetTop|clientTop|scrollTop|
+|offsetParent|无|无|
+ 
  **[⬆ back to top](#readme)**
  
  ## BOM浏览器对象模型
