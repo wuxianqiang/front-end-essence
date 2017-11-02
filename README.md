@@ -489,6 +489,18 @@ HTML元素
  
  **[⬆ back to top](#readme)**
  
+ ## BOM浏览器对象模型
+ 
+ Window对象的location属性引用的是Location对象，它表示该窗口中当前显示的文档的URL。Location对象的href属性是一个字符串，后者包含URL的完整文本。
+ 
+ Location对象的 `hash` 和 `search` 属性比较有趣。如果有的话，`hash` 属性返回 URL 中的“片段标识符”部分。`search` 属性也类似，它返回的是问号之后的URL，这部分通常是某种类型的查询字符串。
+ 
+ Location对象的 `assign()` 方法可以使窗口载入并显示你指定的URL中的文档。`replace()` 方法也类似，但它在载入新文档之前会从浏览历史中把当前文档删除。
+ 
+ 除了 `assgin()` 和 `replace()` 方法，Location对象还定义了 `reload()` 方法，后者可以让浏览器重新载入当前文档。
+ 
+  **[⬆ back to top](#readme)**
+ 
  ## canvas绘图
  使用2D绘图上下文提供的方法，可以绘制简单的2D图形，比如矩形、弧线和路径。2D上下文的坐标开始于 `<canvas>` 元素的左上角，原点坐标是 `(0,0)`。所有坐标值都基于这个原点计算，x值越大表示越靠右，y值越大表示越靠下。默认情况下， `width` 和 `height` 表示水平和垂直两个方向上可用的像素数目。
 
