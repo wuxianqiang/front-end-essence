@@ -304,16 +304,16 @@ ECMAScript 5还新增了两个缩小数组的方法： `reduce()` 和 `reduceRig
 
 |数组方法|是否会修改原先数组|是否有返回值|返回的内容是|
 |-|-|-|-|
-|join()|否|是|生成后的字符串|
-|reverse()|是|是|排序后的新数组|
-|sort()|是|是|排序后的新数组|
-|concat()|否|是|拼接后的新数组|
-|slice()|否|是|截取后的新数组|
-|splice()|是|是|被删除的内容组成的数组|
-|push()|是|是|增加后数组长度|
-|pop()|是|是|被删除的那一项|
-|unshift()|是|是|增加后数组长度|
-|shift()|是|是|被删除的那一项|
+|join()|否|是:white_check_mark:|生成后的字符串|
+|reverse()|是:white_check_mark:|是:white_check_mark:|排序后的新数组|
+|sort()|是:white_check_mark:|是:white_check_mark:|排序后的新数组|
+|concat()|否|是:white_check_mark:|拼接后的新数组|
+|slice()|否|是:white_check_mark:|截取后的新数组|
+|splice()|是:white_check_mark:|是:white_check_mark:|删除项的新数组|
+|push()|是:white_check_mark:|是:white_check_mark:|增加后数组长度|
+|pop()|是:white_check_mark:|是:white_check_mark:|被删除的那一项|
+|unshift()|是:white_check_mark:|是:white_check_mark:|增加后数组长度|
+|shift()|是:white_check_mark:|是:white_check_mark:|被删除的那一项|
 
 **[⬆ back to top](#readme)**
 
