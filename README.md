@@ -315,10 +315,10 @@ ECMAScript 5还新增了两个缩小数组的方法： `reduce()` 和 `reduceRig
 |unshift()|是:white_check_mark:|是:white_check_mark:|增加后数组长度|
 |shift()|是:white_check_mark:|是:white_check_mark:|被删除的那一项|
 |every()|否|是:white_check_mark:|返回一个布尔值|
-|filter()|否|是:white_check_mark:|返回一个数组|
-|forEach()|否|否|undefined|
-|map()|否|是:white_check_mark:|返回一个数组|
 |some()|否|是:white_check_mark:|返回一个布尔值|
+|filter()|否|是:white_check_mark:|返回一个数组|
+|map()|否|是:white_check_mark:|返回一个数组|
+|forEach()|否|否|undefined|
 
 **[⬆ back to top](#readme)**
 
