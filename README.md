@@ -494,9 +494,9 @@ HTML元素
  归纳
  
 |方法名称|HTML文档能否使用|HTML元素能否使用|返回的内容是|是否存在DOM映射|
-|-|-|-|-|
-|getElementById()|能:white_check_mark:|否|元素对象||
-|getElementByName()|能:white_check_mark:|否|NodeList对象||
+|-|-|-|-|-|
+|getElementById()|能:white_check_mark:|否|元素对象|是:white_check_mark:|
+|getElementByName()|能:white_check_mark:|否|NodeList对象|是:white_check_mark:|
 |getElementByTagName()|能:white_check_mark:|能:white_check_mark:|NodeList对象|是:white_check_mark:|
 |getElementByClassName()|能:white_check_mark:|能:white_check_mark:|NodeList对象|是:white_check_mark:|
 |querySelectorAll()|能:white_check_mark:|能:white_check_mark:|NodeList对象|否|
