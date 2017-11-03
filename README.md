@@ -493,21 +493,12 @@ HTML元素
  
  归纳
  
-|方法名称|HTML文档能否使用|HTML元素能否使用|
-|-|-|-|
-|getElementById()|能:white_check_mark:|否|
-|getElementByName|能:white_check_mark:|否|
-|getElementByTagName|能:white_check_mark:|能:white_check_mark:|
-|getElementByClassName|能:white_check_mark:|能:white_check_mark:|
-
- 
-|offset开头|client开头|scroll开头|
-|-|-|-|
-|offsetWidth|clientWidth|scrollWidth|
-|offsetHeight|clientHeight|scrolHeight|
-|offsetLeft|clientLeft|scrollLeft|
-|offsetTop|clientTop|scrollTop|
-|offsetParent|无|无|
+|方法名称|HTML文档能否使用|HTML元素能否使用|返回的内容是|
+|-|-|-|-|
+|getElementById()|能:white_check_mark:|否|元素对象|
+|getElementByName()|能:white_check_mark:|否|NodeList对象|
+|getElementByTagName()|能:white_check_mark:|能:white_check_mark:|NodeList对象|
+|getElementByClassName()|能:white_check_mark:|能:white_check_mark:|NodeList对象|
  
  **[⬆ back to top](#readme)**
  
