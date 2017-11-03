@@ -470,7 +470,9 @@ HTMLDocument->Document->Node->EventTarget->Object
 
  Element 类型用于表现XML或HTML元素，提供了对元素标签名、子节点及特性的访问。所有HTML元素都由 `HTMLElement` 类型表示，不是直接通过这个类型，也是通过它的子类型来表示。 `HTMLElement` 类型直接继承自 `Element` 并添加了一些属性。
  
-表示HTML文档元素的 `HTMLElement` 对象定义了读/写属性，它们映射了元素的 `HTML` 属性。`HTMLElement` 定义了通用的 `HTML` 属性（如id、标题lang和dir）的属性，以及事件处理程序属性（如onclick）。特定的 `Element` 子类型为其元素定义了特定的属性。例如，查询一张图片的URL，可以使用表示`＜img＞`元素的 `HTMLElement` 对象的src属性：
+表示HTML文档元素的 `HTMLElement` 对象定义了读/写属性，它们映射了元素的 `HTML` 属性。`HTMLElement` 定义了通用的 `HTML` 属性（如id、标题lang和dir）的属性，以及事件处理程序属性（如onclick）。特定的 `Element` 子类型为其元素定义了特定的属性。例如，查询一张图片的URL，可以使用表示`＜img＞`元素的 `HTMLElement` 对象的 `src` 属性。
+
+HTMLElement和其子类型定义了一些属性，它们对应于元素的标准HTML属性。Element类型还定义了 `getAttribute()` 和 `setAttribute()` 方法来查询和设置非标准的HTML属性，也可用来查询和设置XML文档中元素上的属性。
  
  ```js
 a元素的原型链
