@@ -470,6 +470,8 @@ HTMLDocument->Document->Node->EventTarget->Object
 
  Element 类型用于表现XML或HTML元素，提供了对元素标签名、子节点及特性的访问。所有HTML元素都由 `HTMLElement` 类型表示，不是直接通过这个类型，也是通过它的子类型来表示。 `HTMLElement` 类型直接继承自 `Element` 并添加了一些属性。
  
+表示HTML文档元素的 `HTMLElement` 对象定义了读/写属性，它们映射了元素的 `HTML` 属性。`HTMLElement` 定义了通用的 `HTML` 属性（如id、标题lang和dir）的属性，以及事件处理程序属性（如onclick）。特定的 `Element` 子类型为其元素定义了特定的属性。例如，查询一张图片的URL，可以使用表示`＜img＞`元素的 `HTMLElement` 对象的src属性：
+ 
  ```js
 a元素的原型链
 HTMLAnchorElement->HTMLElement->Element->Node->EventTarget->Object
@@ -506,9 +508,9 @@ HTML5还在Element对象上定义了 `dataset` 属性。该属性指代一个对
  
  除了 `assgin()` 和 `replace()` 方法，Location对象还定义了 `reload()` 方法，后者可以让浏览器重新载入当前文档。
  
- Window对象的history属性引用的是该窗口的History对象。History对象是用来把窗口的浏览历史用文档和文档状态列表的形式表示。History对象的length属性表示浏览历史列表中的元素数量，但出于安全的因素，脚本不能访问已保存的URL。（如果允许，则任意脚本都可以窥探你的浏览历史。）
+ Window对象的 `history` 属性引用的是该窗口的 `History` 对象。`History` 对象是用来把窗口的浏览历史用文档和文档状态列表的形式表示。`History` 对象的`length` 属性表示浏览历史列表中的元素数量，但出于安全的因素，脚本不能访问已保存的 `URL`。（如果允许，则任意脚本都可以窥探你的浏览历史。）
  
- History对象的back()和forward()方法与浏览器的“后退”和“前进”按钮一样：它们使浏览器在浏览历史中前后跳转一格。第三个方法——go()接受一个整数参数，可以在历史列表中向前（正参数）或向后（负参数）跳过任意多个页。
+ History对象的 `back()` 和 `forward()` 方法与浏览器的“后退”和“前进”按钮一样：它们使浏览器在浏览历史中前后跳转一格。第三个方法——go()接受一个整数参数，可以在历史列表中向前（正参数）或向后（负参数）跳过任意多个页。
  
   **[⬆ back to top](#readme)**
  
