@@ -493,6 +493,14 @@ HTML元素
  
  归纳
  
+|方法名称|HTML文档能否使用|HTML元素能否使用|
+|-|-|-|
+|getElementById()|能:white_check_mark:|否|
+|getElementByName|能:white_check_mark:|否|
+|getElementByTagName|能:white_check_mark:|能:white_check_mark:|
+|getElementByClassName|能:white_check_mark:|能:white_check_mark:|
+
+ 
 |offset开头|client开头|scroll开头|
 |-|-|-|
 |offsetWidth|clientWidth|scrollWidth|
