@@ -13,6 +13,7 @@ Web前端技术由html、css和javascript三大部分构成，是一个庞大而
 - [BOM浏览器对象模型](#bom浏览器对象模型)
 - [canvas绘图](#canvas绘图)
 - [前端案例](https://github.com/wuxianqiang/project)
+- [前端问题](https://github.com/wuxianqiang/front-end-essence/issues)
 
 ### 资料
 
