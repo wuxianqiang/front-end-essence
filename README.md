@@ -10,6 +10,7 @@ Web前端技术由html、css和javascript三大部分构成，是一个庞大而
 - [Array类型](#array类型)
 - [Object类型](#object类型)
 - [DOM文档对象模型](#dom文档对象模型)
+- [BOM浏览器对象模型](#bomM浏览器对象模型)
 - [canvas绘图](#canvas绘图)
 - [前端案例](https://github.com/wuxianqiang/project)
 
@@ -427,11 +428,14 @@ JavaScript对象可以看做属性的集合，我们经常会检测集合中成�
 
 ### DOM扩展
 
-* `querySelector()` 方法接收一个CSS选择符，返回与该模式匹配的第一个元素，如果没有找到匹配的元素，返回 `null` 。**（不存在DOM映射）**
-* `querySelectorAll()` 方法接收的参数与 `querySelector()` 方法一样，都是一个CSS选择符，但返回的是所有匹配的元素而不仅仅是一个元素。这个方法返回的是一个 `NodeList` 的实例。**（不存在DOM映射）**
-* 具体来说，返回的值实际上是带有所有属性和方法的 NodeList ，而其底层实现则类似于一组元素的快照，而非不断对文档进行搜索的动态查询。这样实现可以避免使用 NodeList 对象通常会引起的大多数性能问题。
-* Selectors API Level 2规范为 Element 类型新增了一个方法 `matchesSelector()` 。这个方法接收一个参数，即CSS选择符，如果调用元素与该选择符匹配，返回 `true` ；否则，返回 `false` 。看例子。在取得某个元素引用的情况下，使用这个方法能够方便地检测它是否会被 `querySelector()` 或 `querySelectorAll()` 方法返回。
-* 元素遍历
+`querySelector()` 方法接收一个CSS选择符，返回与该模式匹配的第一个元素，如果没有找到匹配的元素，返回 `null` 。
+
+`querySelectorAll()` 方法接收的参数与 `querySelector()` 方法一样，都是一个CSS选择符，但返回的是所有匹配的元素而不仅仅是一个元素。这个方法返回的是一个 `NodeList` 的实例。
+
+具体来说，返回的值实际上是带有所有属性和方法的 NodeList ，而其底层实现则类似于一组元素的快照，而非不断对文档进行搜索的动态查询。这样实现可以避免使用 NodeList 对象通常会引起的大多数性能问题。
+
+Selectors API Level 2规范为 Element 类型新增了一个方法 `matchesSelector()` 。这个方法接收一个参数，即CSS选择符，如果调用元素与该选择符匹配，返回 `true` ；否则，返回 `false` 。看例子。在取得某个元素引用的情况下，使用这个方法能够方便地检测它是否会被 `querySelector()` 或 `querySelectorAll()` 方法返回。
+
 ```
 childElementCount ：返回子元素（不包括文本节点和注释）的个数。
 firstElementChild ：指向第一个子元素； firstChild 的元素版。
@@ -444,52 +448,38 @@ nextElementSibling ：指向后一个同辈元素； nextSibling 的元素版。
 JavaScript通过 Document 类型表示文档。在浏览器中， `document` 对象是 `HTMLDocument` （继承自 Document 类型）的一个实例，表示整个HTML页面。而且， `document` 对象是 `window` 对象的一个属性，因此可以将其作为全局对象来访问。
 
 Document类型代表一个HTML或XML文档，Element类型代表该文档中的一个元素。HTMLDocument和HTMLElement子类只是针对于HTML文档和元素。
+
 ```js
 document的原型链
 HTMLDocument->Document->Node->EventTarget->Object
 ```
-文档的子节点
 
-* 文档的子节点，第一个就是 `documentElement` 属性，该属性始终指向HTML页面中的`<html>`。
-* 作为 `HTMLDocument` 的实例，`document` 对象还有一个 `body` 属性，直接指向`<body>`元素。
-* 所以浏览器都支持 `document.documentElement` 和 `document.body` 属性。
+文档的子节点，第一个就是 `documentElement` 属性，该属性始终指向HTML页面中的`<html>`。作为 `HTMLDocument` 的实例，`document` 对象还有一个 `body` 属性，直接指向`<body>`元素。所以浏览器都支持 `document.documentElement` 和 `document.body` 属性。
 
-文档信息
+作为 `HTMLDocument` 的一个实例， `document` 对象还有一些标准的 Document 对象所没有的属性。这些属性提供了 `document` 对象所表现的网页的一些信息。其中第一个属性就是 `title` ，包含着 `<title>` 元素中的文本——显示在浏览器窗口的标题栏或标签页上。通过这个属性可以取得当前页面的标题，也可以修改当前页面的标题并反映在浏览器的标题栏中。修改 `title` 属性的值不会改变 `<title>` 元素。
 
-* 作为 `HTMLDocument` 的一个实例， `document` 对象还有一些标准的 Document 对象所没有的属性。这些属性提供了 `document` 对象所表现的网页的一些信息。其中第一个属性就是 `title` ，包含着 `<title>` 元素中的文本——显示在浏览器窗口的标题栏或标签页上。通过这个属性可以取得当前页面的标题，也可以修改当前页面的标题并反映在浏览器的标题栏中。修改 `title` 属性的值不会改变 `<title>` 元素。
-* 接下来要介绍的3个属性都与对网页的请求有关，它们是 `URL` 、 `domain` 和 `referrer` 。 `URL` 属性中包含页面完整的 `URL`（即地址栏中显示的URL）， domain 属性中只包含页面的域名，而 `referrer` 属性中则保存着链接到当前页面的那个页面的 `URL` 。在没有来源页面的情况下， `referrer` 属性中可能会包含空字符串。所有这些信息都存在于请求的HTTP头部，只不过是通过这些属性让我们能够在JavaScrip中访问它们而已。
+接下来要介绍的3个属性都与对网页的请求有关，它们是 `URL` 、 `domain` 和 `referrer` 。 `URL` 属性中包含页面完整的 `URL`（即地址栏中显示的URL）， domain 属性中只包含页面的域名，而 `referrer` 属性中则保存着链接到当前页面的那个页面的 `URL` 。在没有来源页面的情况下， `referrer` 属性中可能会包含空字符串。所有这些信息都存在于请求的HTTP头部，只不过是通过这些属性让我们能够在JavaScrip中访问它们而已。
 
-查找元素
+取得元素的操作可以使用 `document` 对象的几个方法来完成。其中， Document 类型为此提供了两个方法： `getElementById()` 和 `getElementsByTagName()` 。 `getElementById()` 只返回文档中第一次出现的元素。IE7及较低版本还为此方法添加了一个有意思的“怪癖”： `name` 特性与给定ID匹配的表单元素（ `<input>` 、 `<textarea>` 、 `<button>` 及 `<select>` ）也会被该方法返回。如果有哪个表单元素的 `name` 特性等于指定的ID，而且该元素在文档中位于带有给定ID的元素前面，那么IE就会返回那个表单元素。另一个常用于取得元素引用的方法是 `getElementsByTagName()` 。这个方法接受一个参数，即要取得元素的标签名，而返回的是包含零或多个元素的 `NodeList` 。
 
-* 取得元素的操作可以使用 `document` 对象的几个方法来完成。其中， Document 类型为此提供了两个方法： `getElementById()` 和 `getElementsByTagName()` 。 `getElementById()` 只返回文档中第一次出现的元素。IE7及较低版本还为此方法添加了一个有意思的“怪癖”： `name` 特性与给定ID匹配的表单元素（ `<input>` 、 `<textarea>` 、 `<button>` 及 `<select>` ）也会被该方法返回。如果有哪个表单元素的 `name` 特性等于指定的ID，而且该元素在文档中位于带有给定ID的元素前面，那么IE就会返回那个表单元素。另一个常用于取得元素引用的方法是 `getElementsByTagName()` 。这个方法接受一个参数，即要取得元素的标签名，而返回的是包含零或多个元素的 `NodeList` 。在HTML文档中，这个方法会返回一个 `HTMLCollection` 对象，作为一个“动态”集合，该对象与 `NodeList` 非常类似。
-* 第三个方法，也是只有 `HTMLDocument` 类型才有的方法，是 `getElementsByName()` 。顾名思义，这个方法会返回带有给定 `name` 特性的所有元素。最常使用 `getElementsByName()` 方法的情况是取得单选按钮；为了确保发送给浏览器的值正确无误，所有单选按钮必须具有相同的 `name` 特性
+第三个方法，也是只有 `HTMLDocument` 类型才有的方法，是 `getElementsByName()` 。顾名思义，这个方法会返回带有给定 `name` 特性的所有元素。最常使用 `getElementsByName()` 方法的情况是取得单选按钮；为了确保发送给浏览器的值正确无误，所有单选按钮必须具有相同的 `name` 特性
 
 ### Element类型
+
  Element 类型用于表现XML或HTML元素，提供了对元素标签名、子节点及特性的访问。所有HTML元素都由 `HTMLElement` 类型表示，不是直接通过这个类型，也是通过它的子类型来表示。 `HTMLElement` 类型直接继承自 `Element` 并添加了一些属性。
+ 
  ```js
 a元素的原型链
 HTMLAnchorElement->HTMLElement->Element->Node->EventTarget->Object
 body元素的原型链
 HTMLBodyElement->HTMLElement->Element->Node->EventTarget->Object
  ```
- HTML5还在Element对象上定义了 `dataset` 属性。该属性指代一个对象，它的各个属性对应于去掉前缀的 `data-` 属性。因此 `dataset.x` 应该保存 `data-x` 属性的值。带连字符的属性对应于驼峰命名法属性名：`data-jquery-test` 属性就变成 `dataset.jqueryTest` 属性。
  
-HTML元素
-
-* `id` ，元素在文档中的唯一标识符。
-* `title` ，有关元素的附加说明信息，一般通过工具提示条显示出来。
-* `lang` ，元素内容的语言代码，很少使用。
-* `dir` ，语言的方向，值为 “ltr” （left-to-right，从左至右）或 “rtl” （right-to-left，从右至左），也很少使用。
-* `className` ，与元素的 `class` 特性对应，即为元素指定的CSS类。没有将这个属性命名为 class ，是因为 class 是ECMAScript的保留字
-* 每个元素都有一或多个特性，这些特性的用途是给出相应元素或其内容的附加信息。操作特性的DOM方法主要有三个，分别是 `getAttribute()` 、 `setAttribute()` 和 `removeAttribute()` 。这三个方法可以针对任何特性使用，包括那些以 HTMLElement类型属性的形式定义的特性。
+HTML5还在Element对象上定义了 `dataset` 属性。该属性指代一个对象，它的各个属性对应于去掉前缀的 `data-` 属性。因此 `dataset.x` 应该保存 `data-x` 属性的值。带连字符的属性对应于驼峰命名法属性名：`data-jquery-test` 属性就变成 `dataset.jqueryTest` 属性。
  
- 创建元素
+使用 `document.createElement()` 方法可以创建新元素。这个方法只接受一个参数，即要创建元素的标签名。这个标签名在HTML文档中不区分大小写，而在XML（包括XHTML）文档中，则是区分大小写的。在新元素上设置这些特性只是给它们赋予了相应的信息。由于新元素尚未被添加到文档树中，因此设置这些特性不会影响浏览器的显示。要把新元素添加到文档树，可以使用 `appendChild()` 、 `insertBefore()` 或 `replaceChild()` 方法。
  
- * 使用 `document.createElement()` 方法可以创建新元素。这个方法只接受一个参数，即要创建元素的标签名。这个标签名在HTML文档中不区分大小写，而在XML（包括XHTML）文档中，则是区分大小写的。在新元素上设置这些特性只是给它们赋予了相应的信息。由于新元素尚未被添加到文档树中，因此设置这些特性不会影响浏览器的显示。要把新元素添加到文档树，可以使用 `appendChild()` 、 `insertBefore()` 或 `replaceChild()` 方法。
- 
- 元素的子节点
- 
- * 元素可以有任意数目的子节点和后代节点，因为元素可以是其他元素的子节点。元素的 `childNodes` 属性中包含了它的所有子节点，这些子节点有可能是元素、文本节点、注释或处理指令。不同浏览器在看待这些节点方面存在显著的不同。
+ 元素可以有任意数目的子节点和后代节点，因为元素可以是其他元素的子节点。元素的 `childNodes` 属性中包含了它的所有子节点，这些子节点有可能是元素、文本节点、注释或处理指令。不同浏览器在看待这些节点方面存在显著的不同。
  
  归纳
  
