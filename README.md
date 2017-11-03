@@ -14,6 +14,7 @@ Web前端技术由html、css和javascript三大部分构成，是一个庞大而
 - [canvas绘图](#canvas绘图)
 - [前端案例](https://github.com/wuxianqiang/project)
 - [前端问题](https://github.com/wuxianqiang/front-end-essence/issues)
+- [前端方法](https://github.com/wuxianqiang/libraries)
 
 ### 资料
 
