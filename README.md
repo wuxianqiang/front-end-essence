@@ -403,6 +403,14 @@ ECMAScript 5定义了用来查询和设置对象可扩展性的函数。通过�
 * `Object.entries` 方法返回一个数组，成员是参数对象自身的（不含继承的）所有可遍历（enumerable）属性的键值对数组。
 * 扩展运算符（`...`）用于取出参数对象的所有可遍历属性，拷贝到当前对象之中。
 
+### 归纳
+
+|方法名称|是否可以给对象增加属性|是否可以删除现有属性|是否可以修改现有属性|
+|-|-|-|-|
+|preventExtensibale()|否|是:white_check_mark:|是:white_check_mark:|
+|seal()|否|否|是:white_check_mark:|
+|freeze()|否|否|否|
+
 **[⬆ back to top](#readme)**
 
 ## DOM文档对象模型
