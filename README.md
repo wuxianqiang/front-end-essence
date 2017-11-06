@@ -523,8 +523,15 @@ HTML5还在Element对象上定义了 `dataset` 属性。该属性指代一个对
 |querySelectorAll()|能:white_check_mark:|能:white_check_mark:|NodeList对象|否|
 |querySelector()|能:white_check_mark:|能:white_check_mark:|NodeList对象|否|
  
- **[⬆ back to top](#readme)**
+ ### window对象
  
+ Window对象的 `pageXOffset` 和 `pageYOffset` 属性在所有的浏览器中提供这些值，除了IE 8及更早的版本以外。IE（和所有现代浏览器）也可以通过 `scrollLeft` 和 `scrollTop` 属性来获得滚动条的位置。令人迷惑的是，正常情况下通过查询文档的根节点（`document.documentElement`）来获取这些属性值，但在怪异模式下，必须在文档的`＜body＞`元素（`document.body`）上查询它们。
+ 
+ 判定一个元素的尺寸和位置最简单的方法是调用它的 `getBoundingClientRect()` 方法。该方法是在IE 5中引入的，而现在当前的所有浏览器都实现了。它不需要参数，返回一个有left、right、top和bottom属性的对象。left和top属性表示元素的左上角的X和Y坐标，right和bottom属性表示元素的右下角的X和Y坐标。在很多浏览器（和W3C标准）中，getBoundingClientRect()返回的对象还包含width和height属性，但是在原始的IE中未实现。它们只是调用方法时文档视觉状态的静态快
+照，在用户滚动或改变浏览器窗口大小时不会更新它们。
+ 
+  **[⬆ back to top](#readme)**
+  
  ## BOM浏览器对象模型
  
  Window对象的location属性引用的是Location对象，它表示该窗口中当前显示的文档的URL。Location对象的href属性是一个字符串，后者包含URL的完整文本。
