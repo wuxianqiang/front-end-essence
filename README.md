@@ -529,6 +529,8 @@ HTML5还在Element对象上定义了 `dataset` 属性。该属性指代一个对
  
  判定一个元素的尺寸和位置最简单的方法是调用它的 `getBoundingClientRect()` 方法。该方法是在IE 5中引入的，而现在当前的所有浏览器都实现了。它不需要参数，返回一个有left、right、top和bottom属性的对象。left和top属性表示元素的左上角的X和Y坐标，right和bottom属性表示元素的右下角的X和Y坐标。在很多浏览器（和W3C标准）中，getBoundingClientRect()返回的对象还包含width和height属性，但是在原始的IE中未实现。它们只是调用方法时文档视觉状态的静态快
 照，在用户滚动或改变浏览器窗口大小时不会更新它们。
+
+Window对象的 `scrollTop()` 方法（和其同义词 `scroll()`）接受一个点的X和Y坐标（文档坐标），并作为滚动条的偏移量设置它们。Window的 `scrollBy()` 方法和 `scroll()` 和 `scrollTo()` 类似，但是它的参数是相对的，并在当前滚动条的偏移量上增加。
  
   **[⬆ back to top](#readme)**
   
