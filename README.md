@@ -510,6 +510,8 @@ HTML5还在Element对象上定义了 `dataset` 属性。该属性指代一个对
  
  元素可以有任意数目的子节点和后代节点，因为元素可以是其他元素的子节点。元素的 `childNodes` 属性中包含了它的所有子节点，这些子节点有可能是元素、文本节点、注释或处理指令。不同浏览器在看待这些节点方面存在显著的不同。
  
+ 读取Element的 `innerHTML` 属性作为字符串标记返回那个元素的内容。HTML5还标准化了 `outerHTML` 属性。当查询 `outerHTML` 时，返回的HTML或XML标记的字符串包含被查询元素的开头和结尾标签。当设置元素的 `outerHTML` 时，元素本身被新的内容所替换。只有 `Element` 节点定义了 `outerHTML` 属性，Document节点则无。IE引入的另一个特性是 `insertAdjacentHTML()` 方法，它将在HTML5中标准化，它将任意的HTML标记字符串插入到指定的元素“相邻”的位置。标记是该方法的第二个参数，并且“相邻”的精确含义依赖于第一个参数的值。第一个参数为具有以下值之一的字符串："beforebegin"、"afterbegin"、"beforeend"和"afterend"。
+ 
  归纳
  
 |方法名称|HTML文档能否使用|HTML元素能否使用|返回的内容是|是否存在DOM映射|
