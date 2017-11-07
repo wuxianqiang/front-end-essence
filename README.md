@@ -1,4 +1,4 @@
-# Web前端精髓
+# front-end-essence
 
 ![前端](https://raw.githubusercontent.com/wuxianqiang/learning-course/master/logo3.jpg)
 
