@@ -29,6 +29,7 @@ Web前端技术由html、css和javascript三大部分构成，是一个庞大而
 * [GitHub秘籍](https://github.com/tiimgreen/github-cheat-sheet/blob/master/README.zh-cn.md)
 * [每个程序员应该知道...](https://github.com/mr-mig/every-programmer-should-know)
 * [构建单页Web应用](https://github.com/xufei/blog/issues/5)
+* [CSS3属性教程与案例分享](http://www.w3cplus.com/resources/css3-tutorial-and-case)
 
 ## JavaScript基础
 
