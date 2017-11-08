@@ -2,7 +2,7 @@
 
 ![logo](https://raw.githubusercontent.com/wuxianqiang/learning-course/master/logo.jpg)
 
-Web前端技术由html、css和javascript三大部分构成，是一个庞大而复杂的技术体系，其复杂程度不低于任何一门后端语言。而我们在学习它的时候往往是先从某一个点切入，然后不断地接触和学习新的知识点，因此对于初学者很难理清楚整个体系的脉络结构。所以，这篇文章对前端知识进行了归纳，仅供参考。
+对于那些希望学习JavaScript和已经开始使用JavaScript的程序员来说，如果想让自己对JavaScript语言和Web平台的理解和掌握上再上一个台阶，可以通过阅读这篇文章，会让你的JavaScript编程基本更加夯实，你所花费的时间和精力终将会有成倍的回报。
 
 ## 目录
 - [JavaScript基础](#javascript基础)
