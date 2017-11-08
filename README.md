@@ -23,6 +23,7 @@ Web前端技术由html、css和javascript三大部分构成，是一个庞大而
 * [ES6新特性](http://es6-features.org/#Constants)
 * [学习正则](https://github.com/zeeshanu/learn-regex/blob/master/README-cn.md)
 * [Vue语法清单](https://vuejs-tips.github.io/cheatsheet/)
+* [Vuex语法清单](https://vuejs-tips.github.io/vuex-cheatsheet/)
 * [3D动画](https://desandro.github.io/3dtransforms/)
 * [head文档](https://github.com/joshbuchea/HEAD/blob/master/README.md)
 * [前端面试问题](https://github.com/h5bp/Front-end-Developer-Interview-Questions)
