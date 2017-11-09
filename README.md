@@ -11,6 +11,7 @@
 * [ECMAScript6 New Features](http://es6-features.org/#Constants)
 * [ES2015 Cheatsheet](https://devhints.io/es6?utm_source=qq&utm_medium=social)
 * [Learn RegExp](https://github.com/zeeshanu/learn-regex/blob/master/README-cn.md)
+* [JavaScript Regex Cheatsheet](https://www.debuggex.com/cheatsheet/regex/javascript)
 * [Vue Cheatsheet](https://vuejs-tips.github.io/cheatsheet/)
 * [Vuex Cheatsheet](https://vuejs-tips.github.io/vuex-cheatsheet/)
 * [Every Programmer Should Know](https://github.com/mr-mig/every-programmer-should-know)
