@@ -13,7 +13,7 @@
 * [Vue Cheatsheet](https://vuejs-tips.github.io/cheatsheet/)
 * [Vuex Cheatsheet](https://vuejs-tips.github.io/vuex-cheatsheet/)
 * [CSS 3D Transforms](https://desandro.github.io/3dtransforms/)
-* [head文档](https://github.com/joshbuchea/HEAD/blob/master/README.md)
+* [head](https://github.com/joshbuchea/HEAD/blob/master/README.md)
 * [前端面试问题](https://github.com/h5bp/Front-end-Developer-Interview-Questions)
 * [GitHub秘籍](https://github.com/tiimgreen/github-cheat-sheet/blob/master/README.zh-cn.md)
 * [每个程序员应该知道...](https://github.com/mr-mig/every-programmer-should-know)
