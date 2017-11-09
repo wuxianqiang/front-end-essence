@@ -14,6 +14,7 @@
 * [JavaScript Regex Cheatsheet](https://www.debuggex.com/cheatsheet/regex/javascript)
 * [Vue Cheatsheet](https://vuejs-tips.github.io/cheatsheet/)
 * [Vuex Cheatsheet](https://vuejs-tips.github.io/vuex-cheatsheet/)
+* [Flex Cheatsheet](https://yoksel.github.io/flex-cheatsheet/)
 * [Every Programmer Should Know](https://github.com/mr-mig/every-programmer-should-know)
 * [Front-end Job Interview Questions](https://github.com/h5bp/Front-end-Developer-Interview-Questions)
 * [Intro to CSS 3D Transforms](https://desandro.github.io/3dtransforms/)
