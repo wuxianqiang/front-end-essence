@@ -9,6 +9,7 @@
 
 * [Modern JavaScript Cheatsheet](https://github.com/mbeaudru/modern-js-cheatsheet)
 * [ECMAScript6 New Features](http://es6-features.org/#Constants)
+* [ES2015 Cheatsheet](https://devhints.io/es6?utm_source=qq&utm_medium=social)
 * [Learn RegExp](https://github.com/zeeshanu/learn-regex/blob/master/README-cn.md)
 * [Vue Cheatsheet](https://vuejs-tips.github.io/cheatsheet/)
 * [Vuex Cheatsheet](https://vuejs-tips.github.io/vuex-cheatsheet/)
@@ -18,7 +19,7 @@
 * [GitHub Cheat Sheet](https://github.com/tiimgreen/github-cheat-sheet/blob/master/README.zh-cn.md)
 * [Every Programmer Should Know](https://github.com/mr-mig/every-programmer-should-know)
 * [CSS3属性教程与案例分享](http://www.w3cplus.com/resources/css3-tutorial-and-case)
-* [ES2015 Cheatsheet](https://devhints.io/es6?utm_source=qq&utm_medium=social)
+
 
 ## 目录
 * [下载JavaScript知识结构图](https://github.com/wuxianqiang/learning-course/releases)
