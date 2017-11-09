@@ -8,7 +8,7 @@
 
 
 * [Modern JavaScript Cheatsheet](https://github.com/mbeaudru/modern-js-cheatsheet)
-* [ES6新特性](http://es6-features.org/#Constants)
+* [ECMAScript6 New Features](http://es6-features.org/#Constants)
 * [学习正则](https://github.com/zeeshanu/learn-regex/blob/master/README-cn.md)
 * [Vue语法清单](https://vuejs-tips.github.io/cheatsheet/)
 * [Vuex语法清单](https://vuejs-tips.github.io/vuex-cheatsheet/)
