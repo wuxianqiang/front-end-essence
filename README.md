@@ -15,7 +15,7 @@
 * [CSS 3D Transforms](https://desandro.github.io/3dtransforms/)
 * [HEAD](https://github.com/joshbuchea/HEAD/blob/master/README.md)
 * [Front-end Job Interview Questions](https://github.com/h5bp/Front-end-Developer-Interview-Questions)
-* [GitHub秘籍](https://github.com/tiimgreen/github-cheat-sheet/blob/master/README.zh-cn.md)
+* [GitHub Cheat Sheet](https://github.com/tiimgreen/github-cheat-sheet/blob/master/README.zh-cn.md)
 * [每个程序员应该知道...](https://github.com/mr-mig/every-programmer-should-know)
 * [构建单页Web应用](https://github.com/xufei/blog/issues/5)
 * [CSS3属性教程与案例分享](http://www.w3cplus.com/resources/css3-tutorial-and-case)
