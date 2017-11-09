@@ -4,21 +4,9 @@
 
 对于那些希望学习JavaScript和已经开始使用JavaScript的程序员来说，如果想让自己对JavaScript语言和Web平台的理解和掌握再上一个台阶，可以通过阅读这篇文章，会让你的JavaScript编程基本更加夯实。
 
-## 目录
-- [JavaScript基础](#javascript基础)
-- [String类型](#string类型)
-- [Array类型](#array类型)
-- [Object类型](#object类型)
-- [DOM文档对象模型](#dom文档对象模型)
-- [BOM浏览器对象模型](#bom浏览器对象模型)
-- [canvas绘图](#canvas绘图)
-- [前端案例](https://github.com/wuxianqiang/project)
-- [前端问题](https://github.com/wuxianqiang/front-end-essence/issues)
-- [前端方法](https://github.com/wuxianqiang/libraries)
-
 ### 资料
 
-* [下载JavaScript知识结构图](https://github.com/wuxianqiang/learning-course/releases)
+
 * [现代的JavaScript语法清单](https://github.com/mbeaudru/modern-js-cheatsheet)
 * [ES6新特性](http://es6-features.org/#Constants)
 * [学习正则](https://github.com/zeeshanu/learn-regex/blob/master/README-cn.md)
@@ -31,6 +19,20 @@
 * [每个程序员应该知道...](https://github.com/mr-mig/every-programmer-should-know)
 * [构建单页Web应用](https://github.com/xufei/blog/issues/5)
 * [CSS3属性教程与案例分享](http://www.w3cplus.com/resources/css3-tutorial-and-case)
+* [ES2015cheatsheet](https://devhints.io/es6?utm_source=qq&utm_medium=social)
+
+## 目录
+* [下载JavaScript知识结构图](https://github.com/wuxianqiang/learning-course/releases)
+- [JavaScript基础](#javascript基础)
+- [String类型](#string类型)
+- [Array类型](#array类型)
+- [Object类型](#object类型)
+- [DOM文档对象模型](#dom文档对象模型)
+- [BOM浏览器对象模型](#bom浏览器对象模型)
+- [canvas绘图](#canvas绘图)
+- [前端案例](https://github.com/wuxianqiang/project)
+- [前端问题](https://github.com/wuxianqiang/front-end-essence/issues)
+- [前端方法](https://github.com/wuxianqiang/libraries)
 
 ## JavaScript基础
 
