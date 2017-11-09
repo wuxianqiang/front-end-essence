@@ -15,7 +15,7 @@
 * [Vuex Cheatsheet](https://vuejs-tips.github.io/vuex-cheatsheet/)
 * [Every Programmer Should Know](https://github.com/mr-mig/every-programmer-should-know)
 * [Front-end Job Interview Questions](https://github.com/h5bp/Front-end-Developer-Interview-Questions)
-* [CSS 3D Transforms](https://desandro.github.io/3dtransforms/)
+* [Intro to CSS 3D Transforms](https://desandro.github.io/3dtransforms/)
 * [HEAD](https://github.com/joshbuchea/HEAD/blob/master/README.md)
 * [GitHub Cheat Sheet](https://github.com/tiimgreen/github-cheat-sheet/blob/master/README.zh-cn.md)
 * [CSS3属性教程与案例分享](http://www.w3cplus.com/resources/css3-tutorial-and-case)
