@@ -7,7 +7,7 @@
 ### 资料
 
 
-* [现代的JavaScript语法清单](https://github.com/mbeaudru/modern-js-cheatsheet)
+* [Modern JavaScript Cheatsheet](https://github.com/mbeaudru/modern-js-cheatsheet)
 * [ES6新特性](http://es6-features.org/#Constants)
 * [学习正则](https://github.com/zeeshanu/learn-regex/blob/master/README-cn.md)
 * [Vue语法清单](https://vuejs-tips.github.io/cheatsheet/)
@@ -19,7 +19,7 @@
 * [每个程序员应该知道...](https://github.com/mr-mig/every-programmer-should-know)
 * [构建单页Web应用](https://github.com/xufei/blog/issues/5)
 * [CSS3属性教程与案例分享](http://www.w3cplus.com/resources/css3-tutorial-and-case)
-* [ES2015cheatsheet](https://devhints.io/es6?utm_source=qq&utm_medium=social)
+* [ES2015 Cheatsheet](https://devhints.io/es6?utm_source=qq&utm_medium=social)
 
 ## 目录
 * [下载JavaScript知识结构图](https://github.com/wuxianqiang/learning-course/releases)
