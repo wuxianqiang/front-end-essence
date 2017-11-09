@@ -16,8 +16,7 @@
 * [HEAD](https://github.com/joshbuchea/HEAD/blob/master/README.md)
 * [Front-end Job Interview Questions](https://github.com/h5bp/Front-end-Developer-Interview-Questions)
 * [GitHub Cheat Sheet](https://github.com/tiimgreen/github-cheat-sheet/blob/master/README.zh-cn.md)
-* [每个程序员应该知道...](https://github.com/mr-mig/every-programmer-should-know)
-* [构建单页Web应用](https://github.com/xufei/blog/issues/5)
+* [Every Programmer Should Know](https://github.com/mr-mig/every-programmer-should-know)
 * [CSS3属性教程与案例分享](http://www.w3cplus.com/resources/css3-tutorial-and-case)
 * [ES2015 Cheatsheet](https://devhints.io/es6?utm_source=qq&utm_medium=social)
 
