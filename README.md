@@ -20,11 +20,11 @@
 * [Intro to CSS 3D Transforms](https://desandro.github.io/3dtransforms/)
 * [HEAD](https://github.com/joshbuchea/HEAD/blob/master/README.md)
 * [GitHub Cheat Sheet](https://github.com/tiimgreen/github-cheat-sheet/blob/master/README.zh-cn.md)
-* [CSS3属性教程与案例分享](http://www.w3cplus.com/resources/css3-tutorial-and-case)
+
 
 
 ## 目录
-* [下载JavaScript知识结构图](https://github.com/wuxianqiang/learning-course/releases)
+- [下载JavaScript知识结构图](https://github.com/wuxianqiang/learning-course/releases)
 - [JavaScript基础](#javascript基础)
 - [String类型](#string类型)
 - [Array类型](#array类型)
@@ -32,9 +32,7 @@
 - [DOM文档对象模型](#dom文档对象模型)
 - [BOM浏览器对象模型](#bom浏览器对象模型)
 - [canvas绘图](#canvas绘图)
-- [前端案例](https://github.com/wuxianqiang/project)
-- [前端问题](https://github.com/wuxianqiang/front-end-essence/issues)
-- [前端方法](https://github.com/wuxianqiang/libraries)
+* [CSS3属性教程与案例分享](http://www.w3cplus.com/resources/css3-tutorial-and-case)
 
 ## JavaScript基础
 
