@@ -1,4 +1,4 @@
-# front end essence
+# 前端精髓
 
 ![logo](https://raw.githubusercontent.com/wuxianqiang/learning-course/master/logo.jpg)
 
