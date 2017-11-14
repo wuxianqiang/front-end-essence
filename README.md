@@ -24,7 +24,7 @@
 
 
 ## 目录
-- [下载JavaScript知识结构图](https://github.com/wuxianqiang/learning-course/releases)
+
 - [JavaScript基础](#javascript基础)
 - [String类型](#string类型)
 - [Array类型](#array类型)
@@ -32,7 +32,8 @@
 - [DOM文档对象模型](#dom文档对象模型)
 - [BOM浏览器对象模型](#bom浏览器对象模型)
 - [canvas绘图](#canvas绘图)
-* [CSS3属性教程与案例分享](http://www.w3cplus.com/resources/css3-tutorial-and-case)
+- [下载JavaScript知识结构图](https://github.com/wuxianqiang/learning-course/releases)
+- [CSS3属性教程与案例分享](http://www.w3cplus.com/resources/css3-tutorial-and-case)
 
 ## JavaScript基础
 
