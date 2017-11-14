@@ -32,8 +32,6 @@
 - [DOM文档对象模型](#dom文档对象模型)
 - [BOM浏览器对象模型](#bom浏览器对象模型)
 - [canvas绘图](#canvas绘图)
-- [下载JavaScript知识结构图](https://github.com/wuxianqiang/learning-course/releases)
-- [CSS3属性教程与案例分享](http://www.w3cplus.com/resources/css3-tutorial-and-case)
 
 ## JavaScript基础
 
