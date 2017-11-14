@@ -542,7 +542,7 @@ HTML5还在Element对象上定义了 `dataset` 属性。该属性指代一个对
 |querySelectorAll()|能:white_check_mark:|能:white_check_mark:|NodeList对象|否|
 |querySelector()|能:white_check_mark:|能:white_check_mark:|NodeList对象|否|
  
- ### window对象
+### window对象
  
  Window对象的 `pageXOffset` 和 `pageYOffset` 属性在所有的浏览器中提供这些值，除了IE 8及更早的版本以外。IE（和所有现代浏览器）也可以通过 `scrollLeft` 和 `scrollTop` 属性来获得滚动条的位置。令人迷惑的是，正常情况下通过查询文档的根节点（`document.documentElement`）来获取这些属性值，但在怪异模式下，必须在文档的`＜body＞`元素（`document.body`）上查询它们。
  
@@ -551,7 +551,7 @@ HTML5还在Element对象上定义了 `dataset` 属性。该属性指代一个对
 
 Window对象的 `scrollTop()` 方法（和其同义词 `scroll()`）接受一个点的X和Y坐标（文档坐标），并作为滚动条的偏移量设置它们。Window的 `scrollBy()` 方法和 `scroll()` 和 `scrollTo()` 类似，但是它的参数是相对的，并在当前滚动条的偏移量上增加。
  
-  **[⬆ back to top](#readme)**
+**[⬆ back to top](#readme)**
   
  ## BOM浏览器对象模型
  
@@ -567,9 +567,9 @@ Window对象的 `scrollTop()` 方法（和其同义词 `scroll()`）接受一个
  
  History对象的 `back()` 和 `forward()` 方法与浏览器的“后退”和“前进”按钮一样：它们使浏览器在浏览历史中前后跳转一格。第三个方法——go()接受一个整数参数，可以在历史列表中向前（正参数）或向后（负参数）跳过任意多个页。
  
-  **[⬆ back to top](#readme)**
+**[⬆ back to top](#readme)**
   
-  ## RegExp对象
+## RegExp对象
   
 正则表达式是通过RegExp对象来表示的。除了 `RegExp()` 构造函数之外，RegExp对象还支持三个方法和一些属性。`RegExp()` 构造函数带有两个字符串参数，其中第二个参数是可选的，`RegExp()` 用以创建新的RegExp对象。第一个参数包含正则表达式的主体部分，也就是正则表达式直接量中两条斜线之间的文本。需要注意的是，不论是字符串直接量还是正则表达式，都使用“`\`”字符作为转义字符的前缀，因此当给 `RegExp()` 传入一个字符串表述的正则表达式时，必须将“`\`”替换成“`\\`”。`RegExp()` 的第二个参数是可选的，如果提供第二个参数，它就指定正则表达式的修饰符。不过只能传入修饰符g、i、m或者它们的组合。
 
@@ -577,9 +577,9 @@ Window对象的 `scrollTop()` 方法（和其同义词 `scroll()`）接受一个
  
 每个RegExp对象都包含5个属性。属性source是一个只读的字符串，包含正则表达式的文本。属性global是一个只读的布尔值，用以说明这个正则表达式是否带有修饰符g。属性ignoreCase也是一个只读的布尔值，用以说明正则表达式是否带有修饰符i。属性multiline是一个只读的布尔值，用以说明正则表达式是否带有修饰符m。最后一个属性lastIndex，它是一个可读/写的整数。如果匹配模式带有g修饰符，这个属性存储在整个字符串中下一次检索的开始位置，这个属性会被 `exec()` 和 `test()` 方法用到。
  
- **[⬆ back to top](#readme)**
+**[⬆ back to top](#readme)**
  
- ## canvas绘图
+## canvas绘图
  
  使用2D绘图上下文提供的方法，可以绘制简单的2D图形，比如矩形、弧线和路径。2D上下文的坐标开始于 `<canvas>` 元素的左上角，原点坐标是 `(0,0)`。所有坐标值都基于这个原点计算，x值越大表示越靠右，y值越大表示越靠下。默认情况下， `width` 和 `height` 表示水平和垂直两个方向上可用的像素数目。
 
