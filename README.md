@@ -92,85 +92,10 @@ for (var key in object) {
 }
 ```
 
-### 继承 (重点)
-
-* 原型继承
-
-```js
-function A(){
-    this.x = 100;
-}
-A.prototype.getX = function (){
-    console.log(this.x);
-}
-function B(){
-    this.y = 200;
-}
-B.prototype = new A;
-B.prototype.constructor = B;
-```
-
-* call继承
-
-```js
-function A(){
-    this.x = 100;
-}
-function B(){
-    A.call(this);
-}
-```
-
-* 冒充对象继承
-
-```js
-function A() {
-    this.x = 100;
-}
-A.prototype.getX = function () {
-    console.log(this.x);
-};
-function B() {
-    var temp = new A;
-    for (var key in temp) {
-        this[key] = temp[key]; 
-    }
-    temp = null;
-}
-```
-
-* 寄生组合式继承
-
-```js
-function A() {
-    this.x = 100;
-}
-A.prototype.getX = function () {
-    console.log(this);
-};
-function B() {
-    A.call(this);
-}
-B.prototype = Object.create(A.prototype);
-B.prototype.constructor = B;
-```
 ### 其他
 
 使用 `instanceof` 检测某个类是否属于这个类的实例，只有在原型链上就会返回 `true`
-* 函数的多面性，包括普通函数，类，对象。普通函数，它本身就是一个普通函数，执行的时候会形成自己的作用域。类，它有自己的实例，也有一个叫做prototype的属性是自己的原型，它的实例都指向自己的原型。普通对象，它作为对象可以有一些自己的属性和方法。
-
-```js
-function Fn(){
-    var num = 1;
-    this.x = 10;
-}
-Fn.prototype.getX = function (){
-    console.log(this.x);
-}
-Fn();
-var f = new Fn;
-Fn.y = 100;
-```
+* 函数的多面性，包括普通函数，类，对象。普通函数，它本身就是一个普通函数，执行的时候会形成自己的作用域。类，它有自己的实例，也有一个叫做prototype的属性是自己的原型，它的实例都指向自己的原型。
 * 所有的函数都有prototype原型对象，每个对象都自带一个__proto__的属性(面向对象)
 
 ### 数值转换
