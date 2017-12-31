@@ -45,11 +45,13 @@
 4. 在函数的`return`语句中下面代码中如果有`var`会提前声明，有`function`会提前声明和定义，但是`return`本身这条语句如果`var`和`funvtion`是不会的。
 5. 回调函数不会提前声明和定义，自执行函数不会提前声明和定义。
 
-附：[函数提升面试题](函数提升面试题)
+附：[函数提升面试题](https://github.com/wuxianqiang/exercises/issues/11)
 
 ### 重复声明
 
 `var`关键定义变量的时候，如果变量名一样，变量会重新复值，也就相当于修改了之前的变量值。如果使用`let`和`const`重复声明同一个变量是会报错的。用函数声明来定义函数的时候，如果函数名是一样的，那么只会保留后面的函数，因为JavaScript中没有重载。
+
+附：[JavaScript没有重载](https://github.com/wuxianqiang/exercises/issues/12)
 
 ### 变量作用域
 
