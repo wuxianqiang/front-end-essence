@@ -140,7 +140,7 @@ String 类型定义了几个用于在字符串中匹配模式的方法。第一�
 
 ### 字符编码的方法
 
-另外， String 构造函数本身还有一个静态方法： `fromCharCode()` 。这个方法的任务是接收一或多个字符编码，然后将它们转换成一个字符串。从本质上来看，这个方法与实例方法 `charCodeAt()` 执行的是相反的操作。ES6 提供了`String.fromCodePoint`方法，可以识别大于0xFFFF的字符，弥补了`String.fromCharCode`方法的不足，使用时和`charCodeAt()`类型。
+另外， String 构造函数本身还有一个静态方法： `fromCharCode()` 。这个方法的任务是接收一或多个字符编码，然后将它们转换成一个字符串。从本质上来看，这个方法与实例方法 `charCodeAt()` 执行的是相反的操作。ES6 提供了`String.fromCodePoint`方法，可以识别大于0xFFFF的字符，弥补了`String.fromCharCode`方法的不足，使用时和`charCodeAt()`类似。
 
 ### 判断包含字符
 
