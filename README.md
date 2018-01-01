@@ -86,13 +86,15 @@ for (var key in object) {
 
 有3个函数可以把非数值转换为数值：`Number()`、`parseInt()` 和 `parseFloat()`。第一个函数，即转型函数 `Number()` 可以用于任何数据类型，而另两个函数则专门用于把字符串转换成数值。`parseInt()` 提供第二个参数，转换时使用的基数（即多少进制）。多数情况下，我们要解析的都是十进制数值，因此始终将10作为第二个参数是非常必要的。`parseFloat()`不支持传入第二个参数。这三个方法的返回值有两种情况，`NaN`和普通数字。在使用`isNaN()`方法的时候，如果传入的参数不是数字，默认会调用`Number()`方法进行转换。
 
-具体转换规则如下：
+**转换规则**
 
 |方法名称|空字符串|null|undefined|NaN|true|false|不传参|普通对象|
 |-|-|-|-|-|-|-|-|-|
 |Number()|0|0|NaN|NaN|1|0|0|NaN|
 |parseInt()|NaN|NaN|NaN|NaN|NaN|NaN|NaN|NaN|
 |parseFloat()|NaN|NaN|NaN|NaN|NaN|NaN|NaN|NaN|
+
+附：[进制转换的方法](https://github.com/wuxianqiang/exercises/issues/14)
 
 **[⬆ back to top](#readme)**
 
