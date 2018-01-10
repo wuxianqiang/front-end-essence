@@ -63,12 +63,12 @@ JavaScript的函数作用域是指在函数内用`var`声明的变量在函数�
 
 ### 检测数据类型
 
-1. 使用`typeof`操作符检测数据类型的时候，有7种结果：undefined，string，number，boolean，symbol，object，function，对于基本数据类型可以详细检测，但是对用于数据类型不可以，返回值是一个字符串。
-2. 对于检测数据可以直接使用`Array.isArray()`，返回值是一个字符串。
+1. 使用`typeof`操作符检测数据类型的时候，有7种结果：undefined，string，number，boolean，symbol，object，function，对于基本数据类型可以准确判断，返回值一个字符串。
+2. 对于检测数组可以直接使用`Array.isArray()`，返回值是一个布尔值。
 3. 使用`instanceof`操作符可以检测某个类是否是指定类的实例，这个操作符是根据原型链来判断的，返回值是一个布尔值。
-4. 使用对象原型中的`toString`方法，可以对每种数据类型详细的检测，返回值是一个字符串。
+4. 使用对象原型中的`toString`方法，可以准确判断各种数据类型，返回值是一个字符串。
 5. `Object.getPrototypeOf()` 返回的对象的原型。
-6. `isPrototypeOf()` 用于检查传入的对象是否是另一个对象的原型，如：Fn.prototype.isPrototypeOf(fn)
+6. `isPrototypeOf()` 用于检查传入的对象是否是另一个对象的原型，返回值是一个字符串。
 7. 使用`typeof`检测一个不存在的变量并且不会报错叫做“暂时性死区”
 
 
@@ -88,7 +88,7 @@ JavaScript的函数作用域是指在函数内用`var`声明的变量在函数�
 
 ## String类型
 
-String对象的方法也可以在所有基本的字符串值中访问到，其中，继承的 `valueOf()`、 `toLocaleString()` 和 `toString()` 方法，都是返回对象所表示的基本字符串值。String类型的每个实例都有 `length` 属性，表示字符串中包含多少个字符，但是String类型的length是只读的，字符串也是一个类似数组的集合，可以使用索引来获取指定的字符，但是不能使用数组中的方法。
+String类型的每个实例都有 `length` 属性，表示字符串中包含多少个字符，但是String类型的length是只读的，字符串也是一个类似数组的集合，可以使用索引来获取指定的字符，但是不能使用数组中的方法。字符串也可以使用`for-of`循环，也可以进行结构赋值操作。
 
 ### 字符查找方法
 
