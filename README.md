@@ -45,6 +45,18 @@
 4. 在函数的`return`语句中下面代码中如果有`var`会提前声明，有`function`会提前声明和定义，但是`return`本身这条语句如果`var`和`funvtion`是不会的。
 5. 回调函数不会提前声明和定义，自执行函数不会提前声明和定义。
 
+练习:
+```js
+var a = 1;
+function b() {
+  a = 10;
+  return;
+  function a() {}
+}
+b();
+console.log(a);
+```
+答案：1
 
 ### 重复声明
 
