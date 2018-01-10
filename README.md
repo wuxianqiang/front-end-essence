@@ -45,65 +45,17 @@
 4. 在函数的`return`语句中下面代码中如果有`var`会提前声明，有`function`会提前声明和定义，但是`return`本身这条语句如果`var`和`funvtion`是不会的。
 5. 回调函数不会提前声明和定义，自执行函数不会提前声明和定义。
 
-练习:
-```js
-var a = 1;
-function b() {
-  a = 10;
-  return;
-  function a() {}
-}
-b();
-console.log(a);
-```
-答案：1
-
 ### 重复声明
 
 `var`关键定义变量的时候，如果变量名一样，变量会重新复值，也就相当于修改了之前的变量值。如果使用`let`和`const`重复声明同一个变量是会报错的。用函数声明来定义函数的时候，如果函数名是一样的，那么只会保留后面的函数，因为JavaScript中没有重载。
-
-练习：
-```js
-let a = 1;
-console.log(a);
-let a = 1;
-console.log(a);
-```
-答案：报错
 
 ### 变量作用域
 
 变量的作用域是表示变量在哪个作用域中定义的。变量有两种：全局变量和局部变量。全局变量拥有全局作用域，在JavaScript代码中的任何地方都可以使用。然而在函数内声明的变量只在函数体内使用（闭包）。函数内部声明的变量叫局部变量，函数参数也是局部变量，它们只在函数体内有使用。在函数体内，局部变量的优先级高于同名的全局变量。如果在函数内声明的一个局部变量或者函数参数中带有的变量和全局变量重名，那么全局变量就被局部变量所遮盖。尽管在全局作用域编写代码时可以不写`var`语句，但声明局部变量时则必须使用`var`语句。
 
-```js
-function parent() {
-    var hoisted = "I'm a variable";
-    function hoisted() {
-        return "I'm a function";
-    }
-    return hoisted(); 
-}
-console.log(parent());
-```
-答案：报错
-
 ### 函数作用域
 
 JavaScript的函数作用域是指在函数内声明的所有变量在函数体内始终是可见的。有意思的是，这意味着变量在声明之前甚至已经可用。JavaScript的这个特性被非正式地称为声明提前，即JavaScript函数里声明的所有变量（但不涉及赋值）都被“提前”至函数体的顶部 。
-
-```js
-function foo(){
-    function bar() {
-        return 3;
-    }
-    return bar();
-    function bar() {
-        return 8;
-    }
-}
-alert(foo());
-```
-答案：3
 
 ### for-in循环
 
