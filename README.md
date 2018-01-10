@@ -55,7 +55,7 @@
 
 ### 函数作用域
 
-JavaScript的函数作用域是指在函数内声明的所有变量在函数体内始终是可见的。有意思的是，这意味着变量在声明之前甚至已经可用。JavaScript的这个特性被非正式地称为声明提前，即JavaScript函数里声明的所有变量（但不涉及赋值）都被“提前”至函数体的顶部 。
+JavaScript的函数作用域是指在函数内用`var`声明的变量在函数体内始终是可见的。这意味着变量在声明之前甚至已经可用。JavaScript的这个特性被非正式地称为声明提前，即JavaScript函数用`var`里声明的变量（但不涉及赋值）都被“提前”至函数体的顶部 。
 
 ### for-in循环
 
@@ -69,6 +69,7 @@ JavaScript的函数作用域是指在函数内声明的所有变量在函数体�
 4. 使用对象原型中的`toString`方法，可以对每种数据类型详细的检测，返回值是一个字符串。
 5. `Object.getPrototypeOf()` 返回的对象的原型。
 6. `isPrototypeOf()` 用于检查传入的对象是否是另一个对象的原型，如：Fn.prototype.isPrototypeOf(fn)
+7. 使用`typeof`检测一个不存在的变量并且不会报错叫做“暂时性死区”
 
 
 ### 数值转换
@@ -82,8 +83,6 @@ JavaScript的函数作用域是指在函数内声明的所有变量在函数体�
 |Number()|0|0|NaN|NaN|1|0|0|NaN|
 |parseInt()|NaN|NaN|NaN|NaN|NaN|NaN|NaN|NaN|
 |parseFloat()|NaN|NaN|NaN|NaN|NaN|NaN|NaN|NaN|
-
-附：[进制转换的方法](https://github.com/wuxianqiang/exercises/issues/14)
 
 **[⬆ back to top](#readme)**
 
