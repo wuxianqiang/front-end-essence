@@ -112,6 +112,17 @@ for (const key in object) {
 6. `isPrototypeOf()` 用于检查传入的对象是否是另一个对象的原型，返回值是一个字符串。
 7. 使用`typeof`检测一个不存在的变量并且不会报错叫做“暂时性死区”
 
+jQuery是这样判断数据类型
+```js
+var class2type = {};
+var toString = class2type.toString;
+let arr = "Boolean Number String Function Array Date RegExp Object Error Symbol".split(" ")
+arr.forEach((item) => class2type["[object " + item + "]"] = item.toLowerCase())
+function type(obj) {
+	if (obj == null) return obj + "";
+	return typeof obj === "object" || typeof obj === "function" ? class2type[toString.call(obj)] || "object" : typeof obj;
+}
+```
 
 ### 数值转换
 
