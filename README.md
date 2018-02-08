@@ -116,11 +116,11 @@ jQuery是这样判断数据类型
 ```js
 var class2type = {};
 var toString = class2type.toString;
-let arr = "Boolean Number String Function Array Date RegExp Object Error Symbol".split(" ")
-arr.forEach((item) => class2type["[object " + item + "]"] = item.toLowerCase())
+var arr = "Boolean Number String Function Array Date RegExp Object Error Symbol".split(" ");
+arr.forEach((item) => class2type["[object " + item + "]"] = item.toLowerCase());
 function type(obj) {
-	if (obj == null) return obj + "";
-	return typeof obj === "object" || typeof obj === "function" ? class2type[toString.call(obj)] || "object" : typeof obj;
+    if (obj == null) return obj + "";
+    return typeof obj === "object" || typeof obj === "function" ? class2type[toString.call(obj)] || "object" : typeof obj;
 }
 ```
 
