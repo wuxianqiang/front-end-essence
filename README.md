@@ -645,7 +645,7 @@ HTMLBodyElement->HTMLElement->Element->Node->EventTarget->Object
 HTMLElement和其子类型定义了一些属性，它们对应于元素的标准HTML属性。Element类型还定义了 `getAttribute()` 和 `setAttribute()` 方法来查询和设置非标准的HTML属性，也可用来查询和设置XML文档中元素上的属性。
  ```js
  ele.getAttribute(attr)        -> string
- ele.getAttribute(attr, val)
+ ele.setAttribute(attr, val)
  ```
 
 
