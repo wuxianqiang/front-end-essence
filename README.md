@@ -238,6 +238,10 @@ split(str | reg, limit) -> array
 * 如果字符串等于字符串参数，则返回 0 ；
 * 如果字符串在字母表中应该排在字符串参数之后，则返回一个正数（大多数情况下是 1 ，具体的值同样要视实现而定）。
 
+```js
+"a".localeCompare("b")
+```
+
 ### 字符串的静态方法
 
 另外， String 构造函数本身还有一个静态方法： `fromCharCode()` 。这个方法的任务是接收一或多个字符编码，然后将它们转换成一个字符串。从本质上来看，这个方法与实例方法 `charCodeAt()` 执行的是相反的操作。ES6 提供了`String.fromCodePoint`方法，可以识别大于0xFFFF的字符，弥补了`String.fromCharCode`方法的不足，使用时和`charCodeAt()`类似。
@@ -406,42 +410,35 @@ create(object | null, descriptors?)   -> object
 ### 检测属性
 
 `in` 运算符的左侧是属性名（字符串），右侧是对象。如果对象的自有属性或继承属性中包含这个属性则返回 `true`
+```js
+"getComputedStyle" in window
+```
 
 对象的 `hasOwnProperty()` 方法用来检测给定的名字是否是对象的自有属性。对于继承属性它将返回 `false`
+```js
+Object.hasOwnProperty("name")
+```
 
 `propertyIsEnumerable()` 是 `hasOwnProperty()` 的增强版，只有检测到是自有属性且这个属性的可枚举性为true时它才返回true。
-
-### 属性的特性
-
-通过调用 `Object.getOwnPropertyDescriptor()` 可以获得某个对象特定属性的属性描述符。`Object.getOwnPropertyDescriptor()` 只能得到自有属性的描
-述符。
-
-要想设置属性的特性，或者想让新建属性具有某种特性，则需要调用 `Object.definePeoperty()`，传入要修改的对象、要创建或修改的属性的名称以及属性描述符对象
-
-如果要同时修改或创建多个属性，则需要使用 `Object.defineProperties()`。第一个参数是要修改的对象，第二个参数是一个映射表，它包含要新建或修改的属性的名称，以及它们的属性描述符。
-
-### 实例方法
-
-`Constructor` ：保存着用于创建当前对象的函数。
-
-`hasOwnProperty(propertyName)` ：用于检查给定的属性在当前对象实例中（而不是在实例的原型中）是否存在。其中，作为参数的属性名（ `propertyName` ）必须以字符串形式指定（例如： `o.hasOwnProperty(“name”)` ）。
-
-`isPrototypeOf(object)` ：用于检查传入的对象是否是另一个对象的原型。
-
-`propertyIsEnumerable(propertyName)` ：用于检查给定的属性是否能够使用 `for-in` 语句（本章后面将会讨论）来枚举。与 `hasOwnProperty()` 方法一样，作为参数的属性名必须以字符串形式指定。
-
-`toLocaleString()` ：返回对象的字符串表示，该字符串与执行环境的地区对应。
-
-`toString()` ：返回对象的字符串表示。
-
-`valueOf()` ：返回对象的字符串、数值或布尔值表示。通常与 `toString()` 方法的返回值相同。
+```js
+window.propertyIsEnumerable("name")
+```
 
 ### 静态方法
 `Object.assign`方法用于对象的合并，将源对象的所有可枚举属性，复制到目标对象中，可以接收多个参数，第一个参数是目标对象，注意，该方法只是一个浅拷贝的方法，意思是只会拷贝当前对象，如果对象里面还有对象，将引用原对象。
 ```js
-assign(target, ...src) -> target
+Object.assign(target, ...src) -> target
 ```
-
+Object.is就ES6的新方法。它用来比较两个值是否严格相等，与严格比较运算符（===）的行为基本一致。不同之处只有两个：一是+0不等于-0，二是NaN等于自身。
+```js
+Object.is(a, b) -> bool
+```
+Object.setPrototypeOf()是设置对象的原型、Object.getPrototypeOf()是获取对象的原型、Object.create()是创建对象的原型。
+```js
+Object.setPrototypeOf(target, proto | null) -> target
+Object.create(object | null, descriptors?) -> object
+Object.getPrototypeOf(object) -> object | null
+```
 
 ### 可扩展性
 
