@@ -216,11 +216,11 @@ toLowerCase(str)         -> string
 
 String 类型定义了几个用于在字符串中匹配模式的方法。第一个方法就是 `match()` ，在字符串上调用这个方法，本质上与调用 `RegExp` 的 `exec()` 方法相同。 `match()` 方法只接受一个参数，要么是一个正则表达式，要么是一个 RegExp 对象，要么是一个字符串。
 ```js
-match(str | reg)         -> array | null
+match(str | reg)           -> array | null
 ```
 另一个用于查找模式的方法是 `search()` 。这个方法的唯一参数与 `match()` 方法的参数相同：由字符串或 RegExp 对象指定的一个正则表达式。 `search()` 方法返回字符串中第一个匹配项的索引；如果没有找到匹配项，则返回 -1 。而且， `search()` 方法始终是从字符串开头向后查找模式。
 ```js
-search(str | reg)        -> index | -1
+search(str | reg)          -> index | -1
 ```
 为了简化替换子字符串的操作，ECMAScript提供了 `replace()` 方法。这个方法接受两个参数：第一个参数可以是一个 RegExp 对象或者一个字符串（这个字符串不会被转换成正则表达式），第二个参数可以是一个字符串或者一个函数。如果第一个参数是字符串，那么只会替换第一个子字符串。要想替换所有子字符串，唯一的办法就是提供一个正则表达式，而且要指定全局（ g ）标志
 ```js
@@ -228,7 +228,7 @@ replace(str | reg, str | fn) -> string
 ```
 最后一个与模式匹配有关的方法是 `split()` ，这个方法可以基于指定的分隔符将一个字符串分割成多个子字符串，并将结果放在一个数组中。分隔符可以是字符串，也可以是一个 RegExp 对象（这个方法不会将字符串看成正则表达式）。 `split()` 方法可以接受可选的第二个参数，用于指定数组的大小，以便确保返回的数组不会超过给定大小。
 ```js
-split(str | reg, limit)  -> array
+split(str | reg, limit)    -> array
 ```
 ### 字符串比较的方法
 
@@ -274,14 +274,14 @@ join(str)        -> string
 `push()` 方法可以接收任意数量的参数，把它们逐个添加到数组末尾，并返回修改后数组的长度。而 `pop()` 方法则从数组末尾移除最后一项，减少数组的 `length` 值，然后返回移除的项。
 ```js
 push(...args)   -> length
-pop() -> delete
+pop()           -> delete
 ```
 
 ### 队列方法
 
 由于 `push()` 是向数组末端添加项的方法，因此要模拟队列只需一个从数组前端取得项的方法。实现这一操作的数组方法就是 `shift()` ，它能够移除数组中的第一个项并返回该项，同时将数组长度减1。
 ```js
-shift() -> delete
+shift()          -> delete
 ```
 ECMAScript还为数组提供了一个 `unshift()` 方法。顾名思义， `unshift()` 与 `shift()` 的用途相反：它能在数组前端添加任意个项并返回新数组的长度。
 ```js
@@ -364,7 +364,7 @@ reduceRight(fn(memo, item, index, @), memo?)   -> value
 `Array.from()` 这个方法是ES6新增的，这个方法是将类数组转换为数组，接收一个类数组或是可迭代的对象作为参数，并返回真实的数组，而且还自带`map`功能，值得注意的是这是一个静态方法，并不在数组的原型对象上。还有`Array.of()` 这个方法是ES6新增的，就是把传入参数放到数组里面方法。
 ```js
 Array.from(iterable | array-like, mapFn(item, index)?, that) -> array
-Array.of(...args) -> array
+Array.of(...args)                                            -> array
 ```
 
 ### 其他
