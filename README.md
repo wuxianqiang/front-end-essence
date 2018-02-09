@@ -238,8 +238,8 @@ String 类型定义了几个用于在字符串中匹配模式的方法。第一�
 
 另外， String 构造函数本身还有一个静态方法： `fromCharCode()` 。这个方法的任务是接收一或多个字符编码，然后将它们转换成一个字符串。从本质上来看，这个方法与实例方法 `charCodeAt()` 执行的是相反的操作。ES6 提供了`String.fromCodePoint`方法，可以识别大于0xFFFF的字符，弥补了`String.fromCharCode`方法的不足，使用时和`charCodeAt()`类似。
 
-> String.fromCodePoint(...codePoints) -> string
-> String.fromCodePoint(...codePoints) -> string
+>1. String.fromCodePoint(...codePoints) -> string
+>1. String.fromCodePoint(...codePoints) -> string
 
 
 **[⬆ back to top](#readme)**
@@ -249,12 +249,6 @@ String 类型定义了几个用于在字符串中匹配模式的方法。第一�
 ### 创建数组
 
 使用数组直接量是创建数组最简单的方法，在方括号中将数组元素用逗号隔开即可。调用构造函数Array()是创建数组的另一种方法，调用时没有参数，该方法创建一个没有任何元素的空数组，调用时有一个数值参数，它指定长度，当预先知道所需元素个数时，这种形式的Array()构造函数可以用来预分配一个数组空间。注意，数组中没有存储值。还可以显式指定两个或多个数组元素或者数组的一个非数值元素，以这种形式，构造函数的参数将会成为新数组的元素。
-```js
-new Array(3, 11, 8)
-// [ 3, 11, 8 ]
-new Array(3)
-// [ , , ,]
-```
 
 ### 元素的添加和删除
 
@@ -263,12 +257,10 @@ new Array(3)
 ### 转换方法
 
 数组继承的`toString()`，在默认情况下都会以逗号分隔的字符串的形式返回数组项。调用数组的`toString`其实会调用数据的每一项`toString`，而如果使用 join() 方法，则可以使用不同的分隔符来构建这个字符串。 `join()` 方法只接收一个参数，即用作分隔符的字符串，然后返回包含所有数组项的字符串。不传入参数默认是以逗号分隔的。
-
 ```js
-[[1],[2]].toString()
-// 1, 2
+toString(arr) -> string
+join(str) -> string
 ```
-
 ### 栈方法
 
 `push()` 方法可以接收任意数量的参数，把它们逐个添加到数组末尾，并返回修改后数组的长度。而 `pop()` 方法则从数组末尾移除最后一项，减少数组的 `length` 值，然后返回移除的项。
