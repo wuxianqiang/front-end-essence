@@ -503,52 +503,92 @@ Object.freeze(object)                     -> object
 **[⬆ back to top](#readme)**
 
 ## DOM文档对象模型
+每个Window对象有一个document属性引用了Document对象。Document对象表示窗口的内容，它就是本章的主题。尽管如此，Document对象并非独立的，它是一个巨大的API中的核心对象，叫做文档对象模型（Document Object Model，DOM），它代表和操作文档的内容。
 
 ### 节点类型
 
 每个节点都有一个 `nodeType` 属性，用于表明节点的类型。要了解节点的具体信息，可以使用 `nodeName` 和 `nodeValue` 这两个属性。
+|节点名称|nodeType|nodeName|nodeValue|
+|-|-|-|-|
+|元素节点|1|大写标签名|null|
+|文本节点|3|#text|文字内容|
+|注释节点|8|#comment|注释内容|
+|document|9|#document|null|
 
 ### 节点关系
 
-每个节点都有一个 `childNodes` 属性，其中保存着一个 `NodeList` 对象。 `NodeList` 是一种类数组对象，用于保存一组有序的节点，可以通过位置来访问这些节点。请注意，虽然可以通过方括号语法来访问 `NodeList` 的值，而且这个对象也有 `length` 属性，但它并不是 `Array` 的实例。 `NodeList` 对象的独特之处在于，它实际上是基于 DOM 结构动态执行查询的结果，因此 DOM 结构的变化能够自动反映在 `NodeList` 对象中。我们常说， `NodeList` 是有生命、有呼吸的对象，而不是在我们第一次访问它们的某个瞬间拍摄下来的一张快照。
+每个节点都有一个 `childNodes` 属性，其中保存着一个 `NodeList` 对象， `NodeList` 是一种只读的类数组对象，用于保存一组有序的节点，可以通过位置来访问这些节点。请注意，虽然可以通过方括号语法来访问 `NodeList` 的值，而且这个对象也有 `length` 属性，但它并不是 `Array` 的实例。 `NodeList` 对象的独特之处在于，它实际上是基于 DOM 结构动态执行查询的结果，因此 DOM 结构的变化能够自动反映在 `NodeList` 对象中（DOM映射）。我们常说， `NodeList` 是有生命、有呼吸的对象，而不是在我们第一次访问它们的某个瞬间拍摄下来的一张快照。
+```js
+ele.childNodes -> NodeList
+```
 
 每个节点都有一个 `parentNode` 属性，该属性指向文档树中的父节点。包含在 `childNodes` 列表中的所有节点都具有相同的父节点，因此它们的 `parentNode` 属性。
-
+```js
+ele.parentNode -> element | null
+```
 通过使用列表中每个节点的 `previousSibling` 和 `nextSibling` 属性，可以访问同一列表中的其他节点。列表中第一个节点的 `previousSibling` 属性值为 `null` ，而列表中最后一个节点的 `nextSibling` 属性的值同样也为 `null`。
-
+```js
+ele.previousSibling -> node | null
+ele.nextSibling -> node | null
+```
 父节点的 `firstChild` 和 `lastChild` 属性分别指向其 `childNodes` 列表中的第一个和最后一个节点。在只有一个子节点的情况下， `firstChild` 和`lastChild` 指向同一个节点。
-
+```js
+ele.parentNode.firstChild -> node | null
+ele.parentNode.lastChild -> node | null
+```
 另外， `hasChildNodes()` 也是一个非常有用的方法，这个方法在节点包含一或多个子节点的情况下返回 `true` ；应该说，这是比查询 `childNodes` 列表的 length 属性更简单的方法。
+```js
+ele.hasChildNodes() -> boolean
+```
 
 所有节点都有的最后一个属性是 `ownerDocument` ，该属性指向表示整个文档的文档节点。
 
 ### 节点操作
 
 最常用的方法是 `appendChild()` ，用于向 `childNodes` 列表的末尾添加一个节点。添加节点后， `childNodes` 的新增节点、父节点及以前的最后一个子节点的关系指针都会相应地得到更新。更新完成后， `appendChild()` 返回新增的节点。如果传入到 appendChild() 中的节点已经是文档的一部分了，那结果就是将该节点从原来的位置转移到新位置。即使可以将DOM树看成是由一系列指针连接起来的，但任何DOM节点也不能同时出现在文档中的多个位置上。(DOM映射)
+```js
+ele.parentNode.appendChild(newEle) -> newEle
+```
 
 如果需要把节点放在 `childNodes` 列表中某个特定的位置上，而不是放在末尾，那么可以使用 `insertBefore()` 方法。这个方法接受两个参数：要插入的节点和作为参照的节点。插入节点后，被插入的节点会变成参照节点的前一个同胞节点（ `previousSibling` ），同时被方法返回。如果参照节点是 `null` ，则 `insertBefore()` 与 `appendChild()` 执行相同的操作。
+```js
+ele.parentNode.insertBefore(newEle, ele) -> newEle
+```
 
 前面介绍的 `appendChild()` 和 `insertBefore()` 方法都只插入节点，不会移除节点。而下面要介绍的 `replaceChild()` 方法接受的两个参数是：要插入的节点和要替换的节点。要替换的节点将由这个方法返回并从文档树中被移除，同时由要插入的节点占据其位置。
+```js
+ele.parentNode.replaceChild(newEle, ele) -> newEle
+```
 
-如果只想移除而非替换节点，可以使用 `removeChild()` 方法。这个方法接受一个参数，即要移除的节点。被移除的节点将成为方法的返回值。
+如果只想移除而非替换节点，可以使用 `removeChild()` 方法。这个方法接受一个参数，即要移除的节点。被移除的节点将成为方法的返回值
+```js
+ele.parentNode.removeChild(ele) -> ele
+```
 
 前面介绍的四个方法操作的都是某个节点的子节点，也就是说，要使用这几个方法必须先取得父节点（使用 `parentNode` 属性）。另外，并不是所有类型的节点都有子节点，如果在不支持子节点的节点上调用了这些方法，将会导致错误发生。
 
 ### 其他方法
 
 有两个方法是所有类型的节点都有的。第一个就是 `cloneNode()` ，用于创建调用这个方法的节点的一个完全相同的副本。 `cloneNode()` 方法接受一个布尔值参数，表示是否执行深复制。在参数为 `true` 的情况下，执行深复制，也就是复制节点及其整个子节点树；在参数为 `false` 的情况下，执行浅复制，即只复制节点本身。复制后返回的节点副本属于文档所有，但并没有为它指定父节点。因此，这个节点副本就成为了一个“孤儿”，除非通过 `appendChild()` 、 `insertBefore()` 或 `replaceChild()` 将它添加到文档中。
+```js
+ele.cloneNode(boolean?) -> node
+```
 
 我们要介绍的最后一个方法是 `normalize()` ，这个方法唯一的作用就是处理文档树中的文本节点。由于解析器的实现或 DOM 操作等原因，可能会出现文本节点不包含文本，或者接连出现两个文本节点的情况。当在某个节点上调用这个方法时，就会在该节点的后代节点中查找上述两种情况。如果找到了空文本节点，则删除它；如果找到相邻的文本节点，则将它们合并为一个文本节点。
 
 ### DOM扩展
 
 `querySelector()` 方法接收一个CSS选择符，返回与该模式匹配的第一个元素，如果没有找到匹配的元素，返回 `null` 。
+```js
+ele.querySelector(selector) -> element | null
+```
 
-`querySelectorAll()` 方法接收的参数与 `querySelector()` 方法一样，都是一个CSS选择符，但返回的是所有匹配的元素而不仅仅是一个元素。这个方法返回的是一个 `NodeList` 的实例。
+`querySelectorAll()` 方法接收的参数与 `querySelector()` 方法一样，都是一个CSS选择符，但返回的是所有匹配的元素而不仅仅是一个元素。这个方法返回的是一个 `NodeList` 的实例。querySelectorAll()返回的NodeList对象并不是实时的：它包含在调用时刻选择器所匹配的元素，但它并不更新后续文档的变化。如果没有匹配的元素，`querySelectorAll()`将返回一个空的 `NodeList` 对象。如果选择器字符串非法，`querySelectorAll()`将抛出一个异常。
+```js
+ele.querySelectorAll(selector) -> likeArray | null
+```
 
 具体来说，返回的值实际上是带有所有属性和方法的 NodeList ，而其底层实现则类似于一组元素的快照，而非不断对文档进行搜索的动态查询。这样实现可以避免使用 NodeList 对象通常会引起的大多数性能问题。
-
-Selectors API Level 2规范为 Element 类型新增了一个方法 `matchesSelector()` 。这个方法接收一个参数，即CSS选择符，如果调用元素与该选择符匹配，返回 `true` ；否则，返回 `false` 。看例子。在取得某个元素引用的情况下，使用这个方法能够方便地检测它是否会被 `querySelector()` 或 `querySelectorAll()` 方法返回。
 
 ```
 childElementCount ：返回子元素（不包括文本节点和注释）的个数。
