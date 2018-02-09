@@ -262,7 +262,7 @@ String.fromCodePoint(...codePoints) -> string
 
 数组继承的`toString()`，在默认情况下都会以逗号分隔的字符串的形式返回数组项。调用数组的`toString`其实会调用数据的每一项`toString`，而如果使用 join() 方法，则可以使用不同的分隔符来构建这个字符串。 `join()` 方法只接收一个参数，即用作分隔符的字符串，然后返回包含所有数组项的字符串。不传入参数默认是以逗号分隔的。
 ```js
-toString(arr) -> string
+toString() -> string
 join(str) -> string
 ```
 ### 栈方法
@@ -291,7 +291,7 @@ reverse() -> array
 ```
 `sort()` 方法可以接收一个比较函数作为参数，以便我们指定哪个值位于哪个值的前面。比较函数接收两个参数，如果第一个参数应该位于第二个之前则返回一个负数，如果两个参数相等则返回0，如果第一个参数应该位于第二个之后则返回一个正数。这两个方法都会改变原有数组，返回排序后的数组。
 ```js
-reverse(fn?) -> array
+sort(fn?) -> array
 ```
 ### 操作方法
 
@@ -317,13 +317,13 @@ splice(start?, limit? replacer?) -> string
 
 ECMAScript 5为数组实例添加了两个位置方法： `indexOf()` 和 `lastIndexOf()` 。这两个方法都接收两个参数：要查找的项和（可选的）表示查找起点位置的索引。其中， `indexOf()` 方法从数组的开头（位置0）开始向后查找， `lastIndexOf()` 方法则从数组的末尾开始向前查找。
 ```js
-indexOf(str, from?) -> index | -1
-lastIndexOf(str, from?) -> index | -1
+indexOf(item, from?) -> index | -1
+lastIndexOf(item, from?) -> index | -1
 ```
 
 `includes()`方法是ES6新增的，这个方法和字符串中的includes()方法类似，但是唯一不同的是，数组中的includes方法中的第二个参数支持负数，而字符中的不可以。
 ```js
-includes(str, from?) -> boolean
+includes(item, from?) -> boolean
 ```
 
 ### 迭代方法
@@ -669,5 +669,7 @@ CSS类：通过内联style属性脚本化CSS样式的一个可选方案是脚本
 
 > 1. 参考资料：[《高级程序设计》](https://book.douban.com/subject/10546125/)
 > 1. 参考资料：[《JavaScript权威指南》](https://book.douban.com/subject/2228378/)
+> 1. 参考资料：[《ECMAScript 6 入门》](http://es6.ruanyifeng.com/)
 > 1. 参考资料：[《Exploring ES6》](https://leanpub.com/exploring-es6/)
 > 1. 参考资料：[《core-js》](https://github.com/zloirock/core-js)
+> 1. 参考资料：[《You-Dont-Know-JS》](https://github.com/getify/You-Dont-Know-JS)
