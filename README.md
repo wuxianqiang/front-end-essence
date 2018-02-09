@@ -517,34 +517,39 @@ Object.freeze(object)                     -> object
 
 ### 节点关系
 
-每个节点都有一个 `childNodes` 属性，其中保存着一个 `NodeList` 对象， `NodeList` 是一种只读的类数组对象，用于保存一组有序的节点，可以通过位置来访问这些节点。请注意，虽然可以通过方括号语法来访问 `NodeList` 的值，而且这个对象也有 `length` 属性，但它并不是 `Array` 的实例。 `NodeList` 对象的独特之处在于，它实际上是基于 DOM 结构动态执行查询的结果，因此 DOM 结构的变化能够自动反映在 `NodeList` 对象中（DOM映射）。我们常说， `NodeList` 是有生命、有呼吸的对象，而不是在我们第一次访问它们的某个瞬间拍摄下来的一张快照。
+每个节点都有一个 `childNodes` 属性，元素的 `childNodes` 属性中包含了它的所有子节点，这些子节点有可能是元素、文本节点、注释或处理指令。不同浏览器在看待这些节点方面存在显著的不同。其中返回一个 `NodeList` 对象， `NodeList` 是一种只读的类数组对象，用于保存一组有序的节点，可以通过位置来访问这些节点。请注意，虽然可以通过方括号语法来访问 `NodeList` 的值，而且这个对象也有 `length` 属性，但它并不是 `Array` 的实例。 `NodeList` 对象的独特之处在于，它实际上是基于 DOM 结构动态执行查询的结果，因此 DOM 结构的变化能够自动反映在 `NodeList` 对象中（DOM映射）。我们常说， `NodeList` 是有生命、有呼吸的对象，而不是在我们第一次访问它们的某个瞬间拍摄下来的一张快照。
 ```js
-ele.childNodes -> NodeList
+ele.childNodes               -> NodeList
 ```
 
 每个节点都有一个 `parentNode` 属性，该属性指向文档树中的父节点。包含在 `childNodes` 列表中的所有节点都具有相同的父节点，因此它们的 `parentNode` 属性。
 ```js
-ele.parentNode -> element | null
+ele.parentNode               -> element | null
 ```
 通过使用列表中每个节点的 `previousSibling` 和 `nextSibling` 属性，可以访问同一列表中的其他节点。列表中第一个节点的 `previousSibling` 属性值为 `null` ，而列表中最后一个节点的 `nextSibling` 属性的值同样也为 `null`。
 ```js
-ele.previousSibling -> node | null
-ele.nextSibling -> node | null
+ele.previousSibling          -> node | null
+ele.nextSibling              -> node | null
 ```
 父节点的 `firstChild` 和 `lastChild` 属性分别指向其 `childNodes` 列表中的第一个和最后一个节点。在只有一个子节点的情况下， `firstChild` 和`lastChild` 指向同一个节点。
 ```js
-ele.parentNode.firstChild -> node | null
-ele.parentNode.lastChild -> node | null
+ele.parentNode.firstChild    -> node | null
+ele.parentNode.lastChild     -> node | null
 ```
 另外， `hasChildNodes()` 也是一个非常有用的方法，这个方法在节点包含一或多个子节点的情况下返回 `true` ；应该说，这是比查询 `childNodes` 列表的 length 属性更简单的方法。
 ```js
-ele.hasChildNodes() -> boolean
+ele.hasChildNodes()          -> boolean
 ```
 
 所有节点都有的最后一个属性是 `ownerDocument` ，该属性指向表示整个文档的文档节点。
 
 ### 节点操作
-
+创建新的Element节点可以使用Document对象的 `createElement()`方法。给方法传递元素的标签名：对HTML文档来说该名字不区分大小写，对XML文档则区分大小写。
+```js
+document.createElement(tagName)   -> element
+```
+使用 `document.createElement()` 方法可以创建新元素。这个方法只接受一个参数，即要创建元素的标签名。这个标签名在HTML文档中不区分大小写，而在XML（包括XHTML）文档中，则是区分大小写的。在新元素上设置这些特性只是给它们赋予了相应的信息。由于新元素尚未被添加到文档树中，因此设置这些特性不会影响浏览器的显示。要把新元素添加到文档树，可以使用 `appendChild()` 、 `insertBefore()` 或 `replaceChild()` 方法。
+ 
 最常用的方法是 `appendChild()` ，用于向 `childNodes` 列表的末尾添加一个节点。添加节点后， `childNodes` 的新增节点、父节点及以前的最后一个子节点的关系指针都会相应地得到更新。更新完成后， `appendChild()` 返回新增的节点。如果传入到 appendChild() 中的节点已经是文档的一部分了，那结果就是将该节点从原来的位置转移到新位置。即使可以将DOM树看成是由一系列指针连接起来的，但任何DOM节点也不能同时出现在文档中的多个位置上。(DOM映射)
 ```js
 ele.parentNode.appendChild(newEle) -> newEle
@@ -555,14 +560,14 @@ ele.parentNode.appendChild(newEle) -> newEle
 ele.parentNode.insertBefore(newEle, ele)  -> newEle
 ```
 
-前面介绍的 `appendChild()` 和 `insertBefore()` 方法都只插入节点，不会移除节点。而下面要介绍的 `replaceChild()` 方法接受的两个参数是：要插入的节点和要替换的节点。要替换的节点将由这个方法返回并从文档树中被移除，同时由要插入的节点占据其位置。
+前面介绍的 `appendChild()` 和 `insertBefore()` 方法都只插入节点，不会移除节点。而下面要介绍的 `replaceChild()` 方法接受的两个参数是：要插入的节点和要替换的节点。要替换的节点将由这个方法返回并从文档树中被移除，同时由要插入的节点占据其位置。如果传递`null`作为第二个参数，`insertBefore()`的行为类似appendChild()，它将节点插入在最后
 ```js
-ele.parentNode.replaceChild(newEle, ele)  -> newEle
+ele.parentNode.replaceChild(newEle, ele)   -> newEle
 ```
 
 如果只想移除而非替换节点，可以使用 `removeChild()` 方法。这个方法接受一个参数，即要移除的节点。被移除的节点将成为方法的返回值
-```js
-ele.parentNode.removeChild(ele)          -> ele
+```js 
+ele.parentNode.removeChild(ele)           -> ele
 ```
 
 前面介绍的四个方法操作的都是某个节点的子节点，也就是说，要使用这几个方法必须先取得父节点（使用 `parentNode` 属性）。另外，并不是所有类型的节点都有子节点，如果在不支持子节点的节点上调用了这些方法，将会导致错误发生。
@@ -627,27 +632,33 @@ document.getElementsByName(name)       -> HTMLCollection
 ### Element类型
 
 
- Element 类型用于表现XML或HTML元素，提供了对元素标签名、子节点及特性的访问。所有HTML元素都由 `HTMLElement` 类型表示，不是直接通过这个类型，也是通过它的子类型来表示。 `HTMLElement` 类型直接继承自 `Element` 并添加了一些属性。
- 
-表示HTML文档元素的 `HTMLElement` 对象定义了读/写属性，它们映射了元素的 `HTML` 属性。`HTMLElement` 定义了通用的 `HTML` 属性（如id、标题lang和dir）的属性，以及事件处理程序属性（如onclick）。特定的 `Element` 子类型为其元素定义了特定的属性。例如，查询一张图片的URL，可以使用表示`＜img＞`元素的 `HTMLElement` 对象的 `src` 属性。
-
-HTMLElement和其子类型定义了一些属性，它们对应于元素的标准HTML属性。Element类型还定义了 `getAttribute()` 和 `setAttribute()` 方法来查询和设置非标准的HTML属性，也可用来查询和设置XML文档中元素上的属性。
-
-
-还有一种使用Element的属性的方法。Node类型定义了attributes属性。针对非Element对象的任何节点，该属性为null。对于Element对象，attributes属性是只读的类数组对象，它代表元素的所有属性。类似NodeLists，attributes对象也是实时的。它可以用数字索引访问，这意味着可以枚举元素的所有属性。并且，它也可以用属性名索引。
- 
- ```js
+Element 类型用于表现XML或HTML元素，提供了对元素标签名、子节点及特性的访问。所有HTML元素都由 `HTMLElement` 类型表示，不是直接通过这个类型，也是通过它的子类型来表示。 `HTMLElement` 类型直接继承自 `Element` 并添加了一些属性。
+```js
 a元素的原型链
 HTMLAnchorElement->HTMLElement->Element->Node->EventTarget->Object
 body元素的原型链
 HTMLBodyElement->HTMLElement->Element->Node->EventTarget->Object
  ```
  
+表示HTML文档元素的 `HTMLElement` 对象定义了读/写属性，它们映射了元素的 `HTML` 属性。`HTMLElement` 定义了通用的 `HTML` 属性（如id、标题lang和dir）的属性，以及事件处理程序属性（如onclick）。特定的 `Element` 子类型为其元素定义了特定的属性。例如，查询一张图片的URL，可以使用表示`＜img＞`元素的 `HTMLElement` 对象的 `src` 属性。
+
+HTMLElement和其子类型定义了一些属性，它们对应于元素的标准HTML属性。Element类型还定义了 `getAttribute()` 和 `setAttribute()` 方法来查询和设置非标准的HTML属性，也可用来查询和设置XML文档中元素上的属性。
+ ```js
+ ele.getAttribute(attr)        -> string
+ ele.getAttribute(attr, val)
+ ```
+
+
+还有一种使用Element的属性的方法。Node类型定义了attributes属性。针对非Element对象的任何节点，该属性为null。对于Element对象，attributes属性是只读的类数组对象，它代表元素的所有属性。类似NodeLists，attributes对象也是实时的。它可以用数字索引访问，这意味着可以枚举元素的所有属性。并且，它也可以用属性名索引。
+ ```js
+ ele.attributes -> NamedNodeMap
+ ```
+ 
 HTML5还在Element对象上定义了 `dataset` 属性。该属性指代一个对象，它的各个属性对应于去掉前缀的 `data-` 属性。因此 `dataset.x` 应该保存 `data-x` 属性的值。带连字符的属性对应于驼峰命名法属性名：`data-jquery-test` 属性就变成 `dataset.jqueryTest` 属性。
- 
-使用 `document.createElement()` 方法可以创建新元素。这个方法只接受一个参数，即要创建元素的标签名。这个标签名在HTML文档中不区分大小写，而在XML（包括XHTML）文档中，则是区分大小写的。在新元素上设置这些特性只是给它们赋予了相应的信息。由于新元素尚未被添加到文档树中，因此设置这些特性不会影响浏览器的显示。要把新元素添加到文档树，可以使用 `appendChild()` 、 `insertBefore()` 或 `replaceChild()` 方法。
- 
- 元素可以有任意数目的子节点和后代节点，因为元素可以是其他元素的子节点。元素的 `childNodes` 属性中包含了它的所有子节点，这些子节点有可能是元素、文本节点、注释或处理指令。不同浏览器在看待这些节点方面存在显著的不同。
+```js
+ele.dataset.attr        -> val
+ele.dataset.attr = val 
+```
  
  读取Element的 `innerHTML` 属性作为字符串标记返回那个元素的内容。HTML5还标准化了 `outerHTML` 属性。当查询 `outerHTML` 时，返回的HTML或XML标记的字符串包含被查询元素的开头和结尾标签。当设置元素的 `outerHTML` 时，元素本身被新的内容所替换。只有 `Element` 节点定义了 `outerHTML` 属性，Document节点则无。IE引入的另一个特性是 `insertAdjacentHTML()` 方法，它将在HTML5中标准化，它将任意的HTML标记字符串插入到指定的元素“相邻”的位置。标记是该方法的第二个参数，并且“相邻”的精确含义依赖于第一个参数的值。第一个参数为具有以下值之一的字符串："beforebegin"、"afterbegin"、"beforeend"和"afterend"。
  
