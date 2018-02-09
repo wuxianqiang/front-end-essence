@@ -155,25 +155,25 @@ String类型的每个实例都有 `length` 属性，表示字符串中包含多�
 
 两个用于访问字符串中特定位置的方法是：`charAt()` , `charCodeAt()`和 `codePointAt` 。这三个方法都接受一个参数，即基于0的字符位置。`charAt()`方法通过传入一个数字来获取指定位置的字符，不传入参数默认返回第一个字符。`charCodeAt()`是通过传入一个数字来获取指定位置的字符编码，不传入参数默认返回第一个字符编码。ES6中一个方法，`codePointAt`方法和`charCodeAt()`类似，唯一优化的地方是可以处理码点大于0xFFFF的字符。
 
-> charAt(position) -> string
-> charCodeAt(position) -> Unicode
-> codePointAt(position) -> Unicode
+>1. charAt(position) -> string
+>1. charCodeAt(position) -> Unicode
+>1. codePointAt(position) -> Unicode
 
 ### 字符串操作方法
 
 第一个就是 `concat()` （该方法数组也有），用于将一或多个字符串拼接起来，返回拼接得到的新字符串。 `concat()` 方法参数可以是任意多个，参数类型也可以是任何数据类型，因为 `concat()` 方法就相当于字符串拼接一样。还提供了三个基于子字符串创建字符串的方法：`slice()` 、`substr()` 和 `substring()` 。这三个方法都是返回被操作字符串的一个子字符串，`slice()` 和 `substring()` 的第二个参数指定的是子字符串最后一个字符后面的位置。而 `substr()` 的第二个参数指定的则是返回的字符个数。在传递给这些方法的参数是负值的情况下，它们的行为就不尽相同了。其中， `slice()` 方法会将传入的负值与字符串的长度相加，`substr()` 方法将负的一个参数加上字符串的长度，而将负的第二个参数转换为0，最后，`substring()` 方法会把所有的负值参数都转换为0，三个方法相同的地方是在不传入参数的情况下或者传入数字0作为参数时都是拷贝原字符串，只传一个参数都是从参数的位置拷贝到最后位置。
 
-> concat(...args) -> string
-> slice(start?, end?) -> string
-> substr(start?, size?) -> string
-> substring(start?, end?) -> string
+>1. concat(...args) -> string
+>1. slice(start?, end?) -> string
+>1. substr(start?, size?) -> string
+>1. substring(start?, end?) -> string
 
 ### 字符串位置方法
 
 有两个可以从字符串中查找子字符串的方法：`indexOf()` 和 `lastIndexOf()` 。这两个方法都是从一个字符串中搜索给定的子字符串，然后返子字符串的位置（如果没有找到该子字符串，则返回 -1 ）。这两个方法的区别在于： `indexOf()` 方法从字符串的开头向后搜索子字符串，而 `lastIndexOf()` 方法是从字符串的末尾向前搜索子字符串。这两个方法都可以接收可选的第二个参数，表示从字符串中的哪个位置开始搜索。换句话说， `indexOf()` 会从该参数指定的位置向后搜索，忽略该位置之前的所有字符；而 `lastIndexOf()` 则会从指定的位置向前搜索，忽略该位置之后的所有字符。但是传入负数无效，但是数组的这两个方法传入的第二个参数是支持负数的。
 
-> indexOf(str, from?) -> number
-> lastIndexOf(str, from?) -> number
+>1. indexOf(str, from?) -> number
+>1. lastIndexOf(str, from?) -> number
 
 `includes`这个方法是ES6新增的，使用的时候和字符串的 `indexOf` 方法类似，但唯一不同的是返回值，使用 `includes` 方法时如果原字符串中包含指定的字符返回 `true`，反之则返回 `false`，而 `indexOf` 在判断是否包含指定字符的时，返回的是字符索引，反之则返回 `-1`。同样使用这个方法的时候还支持传入第二个参数表示开始查找的索引位置，但是传入负数无效，但是数组的这个方法传入的第二个参数是支持负数的。
 
