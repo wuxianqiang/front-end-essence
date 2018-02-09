@@ -585,7 +585,7 @@ ele.querySelector(selector)              -> element | null
 
 `querySelectorAll()` 方法接收的参数与 `querySelector()` 方法一样，都是一个CSS选择符，但返回的是所有匹配的元素而不仅仅是一个元素。这个方法返回的是一个 `NodeList` 的实例。querySelectorAll()返回的NodeList对象并不是实时的：它包含在调用时刻选择器所匹配的元素，但它并不更新后续文档的变化。如果没有匹配的元素，`querySelectorAll()`将返回一个空的 `NodeList` 对象。如果选择器字符串非法，`querySelectorAll()`将抛出一个异常。
 ```js
-ele.querySelectorAll(selector)          -> array-like | null
+ele.querySelectorAll(selector)          -> NodeList
 ```
 
 具体来说，返回的值实际上是带有所有属性和方法的 NodeList ，而其底层实现则类似于一组元素的快照，而非不断对文档进行搜索的动态查询。这样实现可以避免使用 NodeList 对象通常会引起的大多数性能问题。
@@ -614,23 +614,27 @@ HTMLDocument->Document->Node->EventTarget->Object
 
 接下来要介绍的3个属性都与对网页的请求有关，它们是 `URL` 、 `domain` 和 `referrer` 。 `URL` 属性中包含页面完整的 `URL`（即地址栏中显示的URL）， domain 属性中只包含页面的域名，而 `referrer` 属性中则保存着链接到当前页面的那个页面的 `URL` 。在没有来源页面的情况下， `referrer` 属性中可能会包含空字符串。所有这些信息都存在于请求的HTTP头部，只不过是通过这些属性让我们能够在JavaScrip中访问它们而已。
 
-取得元素的操作可以使用 `document` 对象的几个方法来完成。其中， Document 类型为此提供了两个方法： `getElementById()` 和 `getElementsByTagName()` 。 `getElementById()` 只返回文档中第一次出现的元素。IE7及较低版本还为此方法添加了一个有意思的“怪癖”： `name` 特性与给定ID匹配的表单元素（ `<input>` 、 `<textarea>` 、 `<button>` 及 `<select>` ）也会被该方法返回。如果有哪个表单元素的 `name` 特性等于指定的ID，而且该元素在文档中位于带有给定ID的元素前面，那么IE就会返回那个表单元素。另一个常用于取得元素引用的方法是 `getElementsByTagName()` 。这个方法接受一个参数，即要取得元素标签中包含指定的name属性的元素。
+取得元素的操作可以使用 `document` 对象的几个方法来完成。其中， Document 类型为此提供了两个方法： `getElementById()` 和 `getElementsByTagName()` 。 `getElementById()` 只返回文档中第一次出现的元素。IE7及较低版本还为此方法添加了一个有意思的“怪癖”： `name` 特性与给定ID匹配的表单元素（ `<input>` 、 `<textarea>` 、 `<button>` 及 `<select>` ）也会被该方法返回。如果有哪个表单元素的 `name` 特性等于指定的ID，而且该元素在文档中位于带有给定ID的元素前面，那么IE就会返回那个表单元素。另一个常用于取得元素引用的方法是 `getElementsByTagName()` 。这个方法接受一个参数，就是传入标签名来获取一组元素。
 ```js 
-document.getElementById(id)         -> element | null
-document.getElementsByTagName(name) -> HTMLCollection
+document.getElementById(id)            -> element | null
+document.getElementsByTagName(tagName) -> HTMLCollection
 ```
 
 第三个方法，也是只有 `HTMLDocument` 类型才有的方法，是 `getElementsByName()` 。顾名思义，这个方法会返回带有给定 `name` 特性的所有元素。最常使用 `getElementsByName()` 方法的情况是取得单选按钮；为了确保发送给浏览器的值正确无误，所有单选按钮必须具有相同的 `name` 特性
-
+```js 
+document.getElementsByName(name)       -> HTMLCollection
+```
 ### Element类型
 
-还有一种使用Element的属性的方法。Node类型定义了attributes属性。针对非Element对象的任何节点，该属性为null。对于Element对象，attributes属性是只读的类数组对象，它代表元素的所有属性。类似NodeLists，attributes对象也是实时的。它可以用数字索引访问，这意味着可以枚举元素的所有属性。并且，它也可以用属性名索引。
 
  Element 类型用于表现XML或HTML元素，提供了对元素标签名、子节点及特性的访问。所有HTML元素都由 `HTMLElement` 类型表示，不是直接通过这个类型，也是通过它的子类型来表示。 `HTMLElement` 类型直接继承自 `Element` 并添加了一些属性。
  
 表示HTML文档元素的 `HTMLElement` 对象定义了读/写属性，它们映射了元素的 `HTML` 属性。`HTMLElement` 定义了通用的 `HTML` 属性（如id、标题lang和dir）的属性，以及事件处理程序属性（如onclick）。特定的 `Element` 子类型为其元素定义了特定的属性。例如，查询一张图片的URL，可以使用表示`＜img＞`元素的 `HTMLElement` 对象的 `src` 属性。
 
 HTMLElement和其子类型定义了一些属性，它们对应于元素的标准HTML属性。Element类型还定义了 `getAttribute()` 和 `setAttribute()` 方法来查询和设置非标准的HTML属性，也可用来查询和设置XML文档中元素上的属性。
+
+
+还有一种使用Element的属性的方法。Node类型定义了attributes属性。针对非Element对象的任何节点，该属性为null。对于Element对象，attributes属性是只读的类数组对象，它代表元素的所有属性。类似NodeLists，attributes对象也是实时的。它可以用数字索引访问，这意味着可以枚举元素的所有属性。并且，它也可以用属性名索引。
  
  ```js
 a元素的原型链
