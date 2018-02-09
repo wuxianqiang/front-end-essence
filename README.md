@@ -452,23 +452,23 @@ Object.is(a, b) -> bool
 ```
 `Object.setPrototypeOf()`是设置对象的原型、`Object.getPrototypeOf()`是获取对象的原型、`Object.create()`是创建对象的原型。
 ```js
-Object.setPrototypeOf(target, proto | null)    -> target
+Object.setPrototypeOf(object, proto | null)    -> object
 Object.create(object | null, descriptors?)     -> object
 Object.getPrototypeOf(object)                  -> object | null
 ```
 过调用`Object.getOwnPropertyDescriptor()`可以获得某个对象特定属性的属性描述符,从函数名字就可以看出，·Object.getOwnPropertyDescriptor()·只能得到自有属性的描述符。要想获得继承属性的特性，需要遍历原型链。
 ```js
-Object.getOwnPropertyDescriptor(object, key)   -> desc | undefined
+Object.getOwnPropertyDescriptor(object, key)   -> descriptors | undefined
 ```
 
 要想设置属性的特性，或者想让新建属性具有某种特性，则需要调用`Object.definePeoperty()`，传入要修改的对象、要创建或修改的属性的名称以及属性描述符对象。传入Object.defineProperty()的属性描述符对象不必包含所有4个特性。对于新创建的属性来说，默认的特性值是`false`或`undefined`。对于修改的已有属性来说，默认的特性值没有做任何修改。注意，这个方法要么修改已有属性要么新建自有属性，但不能修改继承属性。
 ```js
-Object.defineProperty(object, key, desc)       -> target
+Object.defineProperty(object, key, descriptors) -> object
 ```
 
 如果要同时修改或创建多个属性，则需要使用Object.defineProperties()。第一个参数是要修改的对象，第二个参数是一个映射表，它包含要新建或修改的属性的名称，以及它们的属性描述符。
 ```js
-Object.defineProperties(object, descriptors)  -> target
+Object.defineProperties(object, descriptors)    -> object
 ```
 
 ### 可扩展性
