@@ -186,7 +186,7 @@ lastIndexOf(str, from?) -> index | -1
 `includes`这个方法是ES6新增的，使用的时候和字符串的 `indexOf` 方法类似，但唯一不同的是返回值，使用 `includes` 方法时如果原字符串中包含指定的字符返回 `true`，反之则返回 `false`，而 `indexOf` 在判断是否包含指定字符的时，返回的是字符索引，反之则返回 `-1`。同样使用这个方法的时候还支持传入第二个参数表示开始查找的索引位置，但是传入负数无效，但是数组的这个方法传入的第二个参数是支持负数的。
 ```js
 includes(str, from?) -> boolean
-```js
+```
 `startWidth()`这个方法是ES6新增的，判断字符串是不是以指定的字符开头，返回值是一个布尔类型的值， true/false。同样使用这个方法的时候还支持传入第二个参数表示开始查找的索引位置。
 ```js
 startsWith(str, from?) -> boolean
