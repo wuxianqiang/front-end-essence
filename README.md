@@ -311,7 +311,7 @@ slice(start?, end?) -> array
 * 插入：可以向指定位置插入任意数量的项，只需提供3个参数：起始位置、0（要删除的项数）和要插入的项。如果要插入多个项，可以再传入第四、第五，以至任意多个项。例如， `splice(2,0,“red”,“green”)` 会从当前数组的位置2开始插入字符串 `“red”` 和 `“green”` 。
 * 替换：可以向指定位置插入任意数量的项，且同时删除任意数量的项，只需指定3个参数：起始位置、要删除的项数和要插入的任意数量的项。插入的项数不必与删除的项数相等。例如， `splice  (2,1,“red”,“green”)` 会删除当前数组位置2的项，然后再从位置2开始插入字符串 `“red”` 和 `“green”` 。
 ```js
-splice(start?, limit? replacer?) -> string
+splice(start?, limit?, replacer?) -> array
 ```
 ### 位置方法
 
@@ -352,15 +352,15 @@ findIndex(fn(item, index, @), that) -> index
 
 ECMAScript 5还新增了两个缩小数组的方法： `reduce()` 和 `reduceRight()` 。这两个方法都会迭代数组的所有项，然后构建一个最终返回的值。其中， `reduce()` 方法从数组的第一项开始，逐个遍历到最后。而 `reduceRight()` 则从数组的最后一项开始，向前遍历到第一项。
 ```js
-reduce(fn(memo, item, index, @), memo?) 
-reduceRight(fn(memo, item, index, @), memo?) 
+reduce(fn(memo, item, index, @), memo?) -> value
+reduceRight(fn(memo, item, index, @), memo?) -> value
 ```
 ### 静态方法
 
-`Array.from()` 这个方法是ES6新增的，这个方法是将类数组转换为数组，接收一个类数组或数组作为参数，并返回真实的数组，值得注意的是这是一个静态方法，并不在数组的原型对象上。`Array.of()` 这个方法是ES6新增的，就是把传入的数字转换为数组并返回，如果传入多个数字用逗号隔开。
+`Array.from()` 这个方法是ES6新增的，这个方法是将类数组转换为数组，接收一个类数组或是可迭代的对象作为参数，并返回真实的数组，而且还自带`map`功能，值得注意的是这是一个静态方法，并不在数组的原型对象上。还有`Array.of()` 这个方法是ES6新增的，就是把传入参数放到数组里面方法。
 ```js
-Array.from(iterable | array-like, mapFn(val, index)?, that)
-Array.of(...args)  
+Array.from(iterable | array-like, mapFn(item, index)?, that) -> array
+Array.of(...args) -> array
 ```
 
 ### 其他
@@ -395,27 +395,21 @@ Array.of(...args)
 
 ### 基础知识
 
-我们知道，对象属性是由名字、值和一组特性（attribute）构成的。在ECMAScript5中，属性值可以用一个或两个方法替代，这两个方法就是 `getter` 和 `setter`。由 `getter` 和 `setter` 定义的属性称做“存取器属性”（accessor property），它不同于“数据属性”（data property），数据属性只有一个简单的值。
-
-当程序查询存取器属性的值时，JavaScript调用getter方法（无参数）。这个方法的返回值就是属性存取表达式的值。当程序设置一个存取器属性的值时，JavaScript调用 `setter` 方法，将赋值表达式右侧的值当做参数传入 `setter`。从某种意义上讲，这个方法负责“设置”属性值。可以忽略 `setter` 方法的返回值。
-
-数据属性的4个特性分别是它的值（value）、可写性（writable）、可枚举性（enumerable）和可配置性（configurable）。存取器属性不具有值（value）特性和可写性，它们的可写性是由setter方法存在与否决定的。因此存取器属性的4个特性是读取（get）、写入（set）、可枚举性和可配置性。
-
-对象最常见的用法是创建（create）、设置（set）、查找（query）、删除（delete）、检测（test）和枚举（enumerate）它的属性。
-
 ECMAScript 5定义了一个名为 `Object.create()` 的方法，它创建一个新对象，其中第一个参数是这个对象的原型。`Object.create()` 提供第二个可选参数，用以对对象的属性进行进一步描述。`Object.create()` 是一个静态函数，而不是提供给某个对象调用的方法。使用它的方法很简单，只须传入所需的原型对象即可。
 
-对象的原型（prototype）属性是用来继承属性的，`__proto__` 的属性是用来查询和设置对象的原型。在JavaScript中，类的所有实例对象都从同一个原型对象上继承属性。因此，原型对象是类的核心。
+```js
+create(object | null, descriptors?)   -> object
+```
+
+为了实现属性特性的查询和设置操作，ECMAScript 5中定义了一个名为“属性描述符”的对象，这个对象代表那4个特性。描述符对象的属性和它们所描述的属性特性是同名的。因此，数据属性的描述符对象的属性有value、writable、enumerable和configurable。存取器属性的描述符对象则用get属性和set属性代替value和writable。其中writable、enumerable和configurable都是布尔值，当然，get属性和set属性是函数值。
 
 ### 检测属性
-
-JavaScript对象可以看做属性的集合，我们经常会检测集合中成员的所属关系——判断某个属性是否存在于某个对象中。可以通过 `in` 运算符、`hasOwnPreperty()` 和 `propertyIsEnumerable()` 方法来完成这个工作，甚至仅通过属性查询也可以做到这一点。
 
 `in` 运算符的左侧是属性名（字符串），右侧是对象。如果对象的自有属性或继承属性中包含这个属性则返回 `true`
 
 对象的 `hasOwnProperty()` 方法用来检测给定的名字是否是对象的自有属性。对于继承属性它将返回 `false`
 
-`propertyIsEnumerable()` 是 `hasOwnProperty()` 的增强版，只有检测到是自有属性且这个属性的可枚举性（enumerable attribute）为true时它才返回true。
+`propertyIsEnumerable()` 是 `hasOwnProperty()` 的增强版，只有检测到是自有属性且这个属性的可枚举性为true时它才返回true。
 
 ### 属性的特性
 
@@ -425,11 +419,6 @@ JavaScript对象可以看做属性的集合，我们经常会检测集合中成�
 要想设置属性的特性，或者想让新建属性具有某种特性，则需要调用 `Object.definePeoperty()`，传入要修改的对象、要创建或修改的属性的名称以及属性描述符对象
 
 如果要同时修改或创建多个属性，则需要使用 `Object.defineProperties()`。第一个参数是要修改的对象，第二个参数是一个映射表，它包含要新建或修改的属性的名称，以及它们的属性描述符。
-
-### 原型属性
-
-在ECMAScript 5中，将对象作为参数传入 `Object.getPrototypeOf()` 可以查询它的原型。在ECMAScript 3中，则没有与之等价的函数，但经常使用表达式
-`o.constructor.prototype` 来检测一个对象的原型。通过 `new` 表达式创建的对象，通常继承一个 `constructor` 属性，这个属性指代创建这个对象的构造函数。
 
 ### 实例方法
 
@@ -447,6 +436,13 @@ JavaScript对象可以看做属性的集合，我们经常会检测集合中成�
 
 `valueOf()` ：返回对象的字符串、数值或布尔值表示。通常与 `toString()` 方法的返回值相同。
 
+### 静态方法
+`Object.assign`方法用于对象的合并，将源对象的所有可枚举属性，复制到目标对象中，可以接收多个参数，第一个参数是目标对象，注意，该方法只是一个浅拷贝的方法，意思是只会拷贝当前对象，如果对象里面还有对象，将引用原对象。
+```js
+assign(target, ...src) -> target
+```
+
+
 ### 可扩展性
 
 对象的可扩展性用以表示是否可以给对象添加新属性。
@@ -455,19 +451,8 @@ ECMAScript 5定义了用来查询和设置对象可扩展性的函数。通过�
 
 可扩展属性的目的是将对象“锁定”，以避免外界的干扰。对象的可扩展性通常和属性的可配值性与可写性配合使用，ECMAScript 5定义的一些函数可以更方便地设置多种属性。`Object.seal()` 和 `Object.preventExtensions()` 类似，除了能够将对象设置为不可扩展的，还可以将对象的所有自有属性都设置为不可配置的。也就是说，不能给这个对象添加新属性，而且它已有的属性也不能删除或配置，不过它已有的可写属性依然可以设置。对于那些已经封闭（sealed）起来的对象是不能解封的。可以使用 `Object.isSealed()` 来检测对象是否封闭。
 
-`Object.freeze()` 将更严格地锁定对象——“冻结”（frozen）。除了将对象设置为不可扩展的和将其属性设置为不可配置的之外，还可以将它自有的所有数据属性设置为只读（如果对象的存取器属性具有setter方法，存取器属性将不受影响，仍可以通过给属性赋值调用它们）。使用 `Object.isFrozen()` 来检测对象是否冻结。
+`Object.freeze()` 将更严格地锁定对象——“冻结”。除了将对象设置为不可扩展的和将其属性设置为不可配置的之外，还可以将它自有的所有数据属性设置为只读（如果对象的存取器属性具有setter方法，存取器属性将不受影响，仍可以通过给属性赋值调用它们）。使用 `Object.isFrozen()` 来检测对象是否冻结。
 
-### ES6方法
-
-* ES6 允许直接写入变量和函数，作为对象的属性和方法。
-* ES6 提出“Same-value equality”（同值相等）算法，用来解决这个问题。`Object.is` 就是部署这个算法的新方法。它用来比较两个值是否严格相等，与严格比较运算符（===）的行为基本一致。
-* `Object.assign` 方法用于对象的合并，将源对象（source）的所有可枚举属性，复制到目标对象（target）。
-* `__proto__` 属性（前后各两个下划线），用来读取或设置当前对象的 `prototype` 对象。目前，所有浏览器（包括 IE11）都部署了这个属性。
-* `Object.setPrototypeOf` 方法的作用与 `__proto__` 相同，用来设置一个对象的 `prototype` 对象，返回参数对象本身。它是 ES6 正式推荐的设置原型对象的方法。
-* `Object.getPrototypeOf()` 该方法与 `Object.setPrototypeOf` 方法配套，用于读取一个对象的原型对象。
-* `Object.values` 方法返回一个数组，成员是参数对象自身的（不含继承的）所有可遍历（enumerable）属性的键值。
-* `Object.entries` 方法返回一个数组，成员是参数对象自身的（不含继承的）所有可遍历（enumerable）属性的键值对数组。
-* 扩展运算符（`...`）用于取出参数对象的所有可遍历属性，拷贝到当前对象之中。
 
 ### 归纳
 
