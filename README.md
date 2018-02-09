@@ -444,7 +444,7 @@ Object.getOwnPropertyNames(object)      -> array
 
 `Object.assign`方法用于对象的合并，将源对象的所有可枚举属性，复制到目标对象中，可以接收多个参数，第一个参数是目标对象，注意，该方法只是一个浅拷贝的方法，意思是只会拷贝当前对象，如果对象里面还有对象，将引用原对象。
 ```js
-Object.assign(target, ...src)          -> target
+Object.assign(object, ...src)          -> object
 ```
 Object.is就ES6的新方法。它用来比较两个值是否严格相等，与严格比较运算符（===）的行为基本一致。不同之处只有两个：一是+0不等于-0，二是NaN等于自身。
 ```js
