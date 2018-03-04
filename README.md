@@ -175,10 +175,11 @@ substring(start?, end?)   -> string
 repeat(num)               -> string
 ```
 
-`padStart`和`padStart`这两个方法是ES7新增的，这两个方法接收都接收两个参数，第一个参数指定字符串的长度，第二个参数表示当原字符串没有达到指定的字符长度时，将会用第二个传入的参数往开头或者结尾来补齐字符来达到指定长度。
+`padStart`和`padEnd`这两个方法是ES7新增的，这两个方法接收都接收两个参数，第一个参数指定字符串的长度，第二个参数表示当原字符串没有达到指定的字符长度时，将会用第二个传入的参数往开头或者结尾来补齐字符来达到指定长度。
 
 ```js
-repeat(num, replacer)     -> string
+padStart(num, replacer)     -> string
+padEnd(num, replacer)       -> string
 ```
 ### 字符串位置方法
 
@@ -246,7 +247,7 @@ split(str | reg, limit)    -> array
 
 另外， String 构造函数本身还有一个静态方法： `fromCharCode()` 。这个方法的任务是接收一或多个字符编码，然后将它们转换成一个字符串。从本质上来看，这个方法与实例方法 `charCodeAt()` 执行的是相反的操作。ES6 提供了`String.fromCodePoint`方法，可以识别大于0xFFFF的字符，弥补了`String.fromCharCode`方法的不足，使用时和`charCodeAt()`类似。
 ```js
-String.fromCodePoint(...codePoints) -> string
+String.fromCharCode(...codePoints) -> string
 String.fromCodePoint(...codePoints) -> string
 ```
 
