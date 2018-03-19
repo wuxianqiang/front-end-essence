@@ -134,6 +134,15 @@ function type(obj) {
 [1,2,3].map(parseInt)
 // [1, NaN, NaN]
 ```
+ES6数值上新增的一些方法和改变
+```
+Number.isNaN()移植到Number对象上面，行为完全保持不变。
+Number.parseInt()移植到Number对象上面，行为完全保持不变。
+Number.parseFloat()移植到Number对象上面，行为完全保持不变。
+Number.isInteger()用来判断一个数值是否为整数。
+Math.trunc()方法用于去除一个数的小数部分，返回整数部分。
+Math.sign()方法用来判断一个数到底是正数、负数、还是零。
+```
 
 **转换规则**
 
