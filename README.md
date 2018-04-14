@@ -2,7 +2,7 @@
 
 ![logo](https://raw.githubusercontent.com/wuxianqiang/learning-course/master/logo.jpg)
 
-对于那些希望学习JavaScript和已经开始使用JavaScript的程序员来说，如果想让自己对JavaScript语言和Web平台的理解和掌握再上一个台阶，可以通过阅读这篇文章，会让你的JavaScript编程基本更加夯实。
+对于那些希望学习JavaScript和已经开始使用JavaScript的程序员来说，如果想让自己对JavaScript语言和Web平台的理解和掌握再上一个台阶，可以通过阅读这篇文章，会让你的JavaScript编程基础更加夯实。
 
 ### 资料
 
